@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cfdna-chromatin-xai"
+version = "0.5.2"
+description = "Explainable chromatin-state annotation and matched-null enrichment for cfDNA genomic regions (hg38)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "cfDNA-XAI project" }]
+keywords = ["cfDNA", "chromatin", "ChromHMM", "fetal fraction", "XAI", "enrichment"]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pandas>=2.0",
+    "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.1"]
+# SHAP importance from your own fitted model + hg19<->hg38 build crossing
+xai = ["shap>=0.44", "scikit-learn>=1.2", "joblib>=1.2", "pyliftover>=0.4"]
+
+[project.urls]
+Homepage = "https://github.com/USER/cfdna-chromatin-xai"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

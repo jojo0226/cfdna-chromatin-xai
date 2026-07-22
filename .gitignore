@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Large / re-downloadable reference sequence (fetched by scripts/fetch_fasta.py)
+data/fasta/
+*.fa
+*.fa.gz
+!data/*.bed.gz
+!data/histone/*.bed.gz
+!data/access/*.bed.gz
+
+# Genome-wide raw peaks (chr19-22 subsets are shipped in data/histone/ and
+# data/access/; full-genome peaks are re-downloadable via the fetch scripts)
+data/histone_raw/
+data/access_raw/
+data/squamous_raw/
+data/inflam_raw/
+
+# Outputs
+out/
+*.log
+.DS_Store
+.venv/
+venv/
+
+
+# Fetal-fraction reference peaks (genome-wide; re-downloadable via
+# scripts/fetch_ff_reference.py -> data/access_ff/). Only the precomputed
+# ff_openness_atlas_hg19_50kb.csv.gz is shipped.
+data/access_ff_raw/
+data/access_ff/
+
+data/histone_ff_raw/
+data/histone_ff/

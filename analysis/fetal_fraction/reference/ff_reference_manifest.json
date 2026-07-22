@@ -1,0 +1,287 @@
+{
+  "assembly": "hg19",
+  "bin_size": 50000,
+  "assay": "DNase-seq + Histone ChIP-seq (H3K4me3, H3K4me1, H3K27ac, H3K36me3)",
+  "aggregation": "zmean over replicates",
+  "weight": "signalValue",
+  "n_bins": 57633,
+  "note": "Fetal-fraction cfDNA tissue-of-origin openness panel. No tumor proxy. ATAC-seq NOT included: ENCODE has zero ATAC narrowPeak (hg19 or GRCh38) for placenta/endothelial/monocyte, so an ATAC layer would be non-comparable across the panel. Histone ChIP-seq (4 active marks) added for all 9 tissues in hg19.",
+  "tissues": {
+    "placenta": [
+      "ENCFF166VSZ",
+      "ENCFF602BHS",
+      "ENCFF421EQO"
+    ],
+    "liver": [
+      "ENCFF547IOY",
+      "ENCFF286LYP",
+      "ENCFF572VZQ"
+    ],
+    "endothelial": [
+      "ENCFF382IRS",
+      "ENCFF330HEK",
+      "ENCFF097KBE"
+    ],
+    "monocyte": [
+      "ENCFF376RLJ",
+      "ENCFF815GDP",
+      "ENCFF063IUG"
+    ],
+    "Bcell": [
+      "ENCFF403PJS",
+      "ENCFF159HJV",
+      "ENCFF263YRO"
+    ],
+    "CD4": [
+      "ENCFF191WFG",
+      "ENCFF703UHS",
+      "ENCFF338UFC"
+    ],
+    "CD8": [
+      "ENCFF109VIJ",
+      "ENCFF566SXQ",
+      "ENCFF926OPP"
+    ],
+    "NK": [
+      "ENCFF133YNT",
+      "ENCFF675NXI",
+      "ENCFF840ZTK"
+    ],
+    "K562": [
+      "ENCFF795GKD",
+      "ENCFF626ZGS",
+      "ENCFF540NJO"
+    ],
+    "CMP": [
+      "ENCFF743UIM",
+      "ENCFF725QIG",
+      "ENCFF887XIB"
+    ]
+  },
+  "tracks": {
+    "D_<tissue>": "DNase-seq openness (z-mean over reps, signalValue-weighted)",
+    "H_<tissue>": "mean of the 4 active histone marks (H3K4me3,H3K4me1,H3K27ac,H3K36me3)",
+    "ACC_<tissue>": "accessibility composite (z(D); ATAC excluded, see note)",
+    "C_<tissue>": "combined openness = z-mean(z(H),z(ACC)); histone-only tissues (neutrophil) use z(H) alone; cross-tissue comparable \u2014 default track"
+  },
+  "histone_accessions": {
+    "placenta": {
+      "H3K4me3": [
+        "ENCFF404ATC",
+        "ENCFF715ALK",
+        "ENCFF440GXO"
+      ],
+      "H3K4me1": [
+        "ENCFF030XCJ",
+        "ENCFF063GBN",
+        "ENCFF073FJT"
+      ],
+      "H3K27ac": [
+        "ENCFF435LTO",
+        "ENCFF589MTI",
+        "ENCFF107GTA"
+      ],
+      "H3K36me3": [
+        "ENCFF010WDE",
+        "ENCFF405UEW",
+        "ENCFF645MTH"
+      ]
+    },
+    "liver": {
+      "H3K4me3": [
+        "ENCFF445TVA",
+        "ENCFF722BTD",
+        "ENCFF874ZJI"
+      ],
+      "H3K4me1": [
+        "ENCFF702CQQ",
+        "ENCFF323TFF",
+        "ENCFF713BKS"
+      ],
+      "H3K27ac": [
+        "ENCFF752QSK",
+        "ENCFF234QOT",
+        "ENCFF405UJX"
+      ],
+      "H3K36me3": [
+        "ENCFF597ACD",
+        "ENCFF695ZUX",
+        "ENCFF726AYF"
+      ]
+    },
+    "endothelial": {
+      "H3K4me3": [
+        "ENCFF504SED",
+        "ENCFF681KRK",
+        "ENCFF376IOU"
+      ],
+      "H3K4me1": [
+        "ENCFF425FRS"
+      ],
+      "H3K27ac": [
+        "ENCFF340XWP"
+      ],
+      "H3K36me3": [
+        "ENCFF594LVO",
+        "ENCFF195VOR"
+      ]
+    },
+    "monocyte": {
+      "H3K4me3": [
+        "ENCFF736HIT",
+        "ENCFF026BNA",
+        "ENCFF545IEW"
+      ],
+      "H3K4me1": [
+        "ENCFF608BGQ",
+        "ENCFF498NWJ"
+      ],
+      "H3K27ac": [
+        "ENCFF221DZR",
+        "ENCFF706YSV"
+      ],
+      "H3K36me3": [
+        "ENCFF847IRC",
+        "ENCFF031RKN"
+      ]
+    },
+    "Bcell": {
+      "H3K4me3": [
+        "ENCFF348DYH",
+        "ENCFF789BES",
+        "ENCFF163MJF"
+      ],
+      "H3K4me1": [
+        "ENCFF982RVM",
+        "ENCFF531GRE"
+      ],
+      "H3K27ac": [
+        "ENCFF884VAH",
+        "ENCFF579EPE"
+      ],
+      "H3K36me3": [
+        "ENCFF187GEP",
+        "ENCFF722ENI",
+        "ENCFF484III"
+      ]
+    },
+    "CD4": {
+      "H3K4me3": [
+        "ENCFF998KGR",
+        "ENCFF068WDU",
+        "ENCFF987GDE"
+      ],
+      "H3K4me1": [
+        "ENCFF745TVX",
+        "ENCFF280NWU",
+        "ENCFF834HQN"
+      ],
+      "H3K27ac": [
+        "ENCFF347ILA",
+        "ENCFF230QJQ"
+      ],
+      "H3K36me3": [
+        "ENCFF284ICZ",
+        "ENCFF121GNU",
+        "ENCFF388QCN"
+      ]
+    },
+    "CD8": {
+      "H3K4me3": [
+        "ENCFF198RIV",
+        "ENCFF172MTA",
+        "ENCFF159QZI"
+      ],
+      "H3K4me1": [
+        "ENCFF661YCD",
+        "ENCFF681MAZ",
+        "ENCFF630AMS"
+      ],
+      "H3K27ac": [
+        "ENCFF470MFR",
+        "ENCFF640TPT"
+      ],
+      "H3K36me3": [
+        "ENCFF763ZJS",
+        "ENCFF660BIT",
+        "ENCFF121ZAY"
+      ]
+    },
+    "NK": {
+      "H3K4me3": [
+        "ENCFF180NKN"
+      ],
+      "H3K4me1": [
+        "ENCFF407DJB"
+      ],
+      "H3K27ac": [
+        "ENCFF755QEH"
+      ],
+      "H3K36me3": [
+        "ENCFF571YWH"
+      ]
+    },
+    "K562": {
+      "H3K4me3": [
+        "ENCFF378OQB",
+        "ENCFF883POK",
+        "ENCFF127XXD"
+      ],
+      "H3K4me1": [
+        "ENCFF183UQD",
+        "ENCFF730VTO"
+      ],
+      "H3K27ac": [
+        "ENCFF044JNJ"
+      ],
+      "H3K36me3": [
+        "ENCFF676RWX",
+        "ENCFF498CMP"
+      ]
+    },
+    "CMP": {
+      "H3K4me3": [
+        "ENCFF786UIZ",
+        "ENCFF350HZD",
+        "ENCFF226XQY"
+      ],
+      "H3K4me1": [
+        "ENCFF213IAR",
+        "ENCFF836XTJ",
+        "ENCFF647WEK"
+      ],
+      "H3K36me3": [
+        "ENCFF055MCC",
+        "ENCFF117GHT",
+        "ENCFF878WYQ"
+      ]
+    },
+    "neutrophil": {
+      "H3K4me3": [
+        "ENCFF375LXR",
+        "ENCFF974LQQ",
+        "ENCFF939WHD"
+      ],
+      "H3K4me1": [
+        "ENCFF848EEO",
+        "ENCFF470MVR",
+        "ENCFF340SOL"
+      ],
+      "H3K27ac": [
+        "ENCFF457CTA",
+        "ENCFF937ZZU",
+        "ENCFF175WCL"
+      ],
+      "H3K36me3": [
+        "ENCFF814OQX",
+        "ENCFF141SAQ",
+        "ENCFF461PAG"
+      ]
+    }
+  },
+  "tissue_notes": {
+    "CMP": "common myeloid progenitor (CD34+); shared erythroid/megakaryocyte/granulocyte progenitor axis missing from the mature-cell panel. DNase (3 reps) + H3K4me3/H3K4me1/H3K36me3; no H3K27ac narrowPeak in ENCODE hg19.",
+    "neutrophil": "granulocyte lineage, often the single largest cfDNA contributor. Histone-only (4 active marks); ENCODE has no neutrophil DNase-seq in hg19 or GRCh38."
+  },
+  "n_tissues": 11
+}

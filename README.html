@@ -1,0 +1,296 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<title>cfdna-chromatin-xai — README</title>
+<style>
+body{max-width:900px;margin:2rem auto;padding:0 1.2rem;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.55;color:#1a1a1a}
+h1{border-bottom:2px solid #2C6FB0;padding-bottom:.3rem}
+h2{border-bottom:1px solid #ddd;padding-bottom:.2rem;margin-top:2rem;color:#20486e}
+h3{color:#2C6FB0}
+code{background:#f4f6f8;padding:.1rem .35rem;border-radius:3px;font-size:.9em}
+pre{background:#f4f6f8;padding:1rem;border-radius:6px;overflow-x:auto;border:1px solid #e3e8ec}
+pre code{background:none;padding:0}
+table{border-collapse:collapse;margin:1rem 0;width:100%}
+th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left}
+th{background:#eef3f7}
+img{max-width:100%;height:auto;border:1px solid #eee;border-radius:4px}
+blockquote{border-left:3px solid #2C6FB0;margin:0;padding-left:1rem;color:#444}
+</style></head><body>
+<h1 id="cfdna-chromatin-xai">cfdna-chromatin-xai</h1>
+<p><strong>Explainable chromatin-state annotation and matched-null enrichment for cfDNA genomic regions (hg38).</strong></p>
+<p>This is the chromatin-state interpretation module of a larger explainable-AI (XAI)
+pipeline for cell-free DNA fetal-fraction analysis (an improved seqFF). Given a set
+of <em>important</em> or <em>differential</em> cfDNA genomic regions — for example, the bins a
+fetal-fraction model weights most heavily, or regions that differ between
+sample groups — the module answers: <strong>what chromatin biology sits under these
+regions, and is that association statistically real?</strong></p>
+<p>You bring the model, the tool explains it. <code>selection.shap_from_model(model, X)</code>
+takes your <strong>own fitted fetal-fraction model</strong> (any scikit-learn-style regressor or
+classifier — tree ensemble, linear, or arbitrary) plus its feature matrix and
+computes a region-anchored SHAP attribution locally, so no cfDNA data has to leave
+your machine. The resulting attribution flows straight into the chromatin-explanation
+stages below. If your cohort is in <strong>hg19</strong> (as legacy seqFF cohorts are), the
+<code>liftover</code> module crosses the hg19↔hg38 boundary on coordinates only, with QC.</p>
+<p>It annotates each region against ChromHMM 18-state reference epigenomes, then tests
+whether any state is enriched relative to a <strong>GC / length / mappability-matched null
+background</strong> — the statistical control that separates a real biological signal from
+the trivial fact that some genomic regions are GC-rich, gene-dense, or simply large.
+Two further <strong>state-independent layers</strong> — a six-mark histone ChIP-seq fingerprint
+and an open-chromatin DNase-seq layer — give orthogonal cross-checks on the ChromHMM
+call using the same matched-null machinery.</p>
+<h2 id="why-this-module-first">Why this module first</h2>
+<p>Of all the XAI layers one could build on top of important cfDNA regions
+(chromatin state, cell-of-origin, cfGWAS, ...), chromatin state is the one with
+<strong>external ground truth</strong>: reference epigenomes, housekeeping-gene promoters, and
+gene deserts have known answers, so the engine can be <em>benchmarked</em> rather than
+merely run. Building it first also establishes the statistical scaffolding — the
+matched null, the calibration harness — that every later layer inherits.</p>
+<h2 id="whats-validated-here">What's validated here</h2>
+<p>The engine is exercised end-to-end on real hg38 data (<code>scripts/run_demo.py</code>):</p>
+<p><strong>Positive control (B2).</strong> Promoter windows (±2 kb) of 22 housekeeping genes are
+annotated against four epigenomes. In every one, they enrich for <strong>Promoter</strong>
+chromatin states relative to the matched null:</p>
+<table>
+<thead>
+<tr>
+<th>Epigenome</th>
+<th style="text-align: right;">Promoter log2 fold-enrichment</th>
+<th style="text-align: right;">empirical p</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>placenta</td>
+<td style="text-align: right;">+3.49</td>
+<td style="text-align: right;">0.002</td>
+</tr>
+<tr>
+<td>neutrophil</td>
+<td style="text-align: right;">+2.51</td>
+<td style="text-align: right;">0.002</td>
+</tr>
+<tr>
+<td>B cell</td>
+<td style="text-align: right;">+3.01</td>
+<td style="text-align: right;">0.002</td>
+</tr>
+<tr>
+<td>K562</td>
+<td style="text-align: right;">+2.94</td>
+<td style="text-align: right;">0.002</td>
+</tr>
+</tbody>
+</table>
+<p>Quiescent, Polycomb and Transcription states are correspondingly <em>depleted</em> — the
+expected signature of constitutively active promoters.</p>
+<p><img alt="Positive control" src="docs/figures/positive_control.png" /></p>
+<p><strong>Calibration (B1).</strong> Signal-free query sets (regions drawn from the same
+mappable-genome process as the background) are fed through the engine. The realized
+false-positive rate is <strong>controlled at every state group</strong> (0.000–0.037, all ≤ the
+nominal α=0.05). The empirical p-values are <em>conservative</em> rather than perfectly
+uniform — a known discreteness effect for rare states at small n (see
+<a href="docs/benchmarking.md">docs/benchmarking.md</a> for the diagnosis and the planned
+refinement). Conservative-but-safe is the correct failure mode for a discovery gate:
+it never inflates false positives.</p>
+<p><img alt="B1 calibration" src="docs/figures/b1_calibration.png" /></p>
+<h2 id="install">Install</h2>
+<pre><code class="language-bash">git clone https://github.com/USER/cfdna-chromatin-xai
+cd cfdna-chromatin-xai
+pip install -e .                     # core: annotation + enrichment
+pip install -e .[xai]                # + SHAP-from-model and hg19&lt;-&gt;hg38 liftover
+python scripts/fetch_fasta.py        # one-time: hg38 chr19-22 FASTA (~63 MB, gitignored)
+python scripts/run_demo.py           # reproduces the figures above
+</code></pre>
+<p>The four ChromHMM 18-state reference BEDs (~17 MB) ship in <code>data/</code>; the sequence
+FASTA is fetched separately because it is large and re-downloadable. The <code>[xai]</code>
+extra pulls <code>shap</code>, <code>scikit-learn</code>, <code>joblib</code>, and <code>pyliftover</code> — needed only for
+the SHAP-from-model and liftover paths, so the core install stays lightweight.</p>
+<h2 id="usage">Usage</h2>
+<pre><code class="language-python">from cfdna_chromatin import references as R, genome as G, engine as E
+
+seg    = {t: R.load_segmentation(f&quot;data/{t}_{a}.bed.gz&quot;, chroms=[&quot;chr19&quot;])
+          for t, a in R.REFERENCE_ACCESSIONS.items()}
+genome = G.load_genome({&quot;chr19&quot;: &quot;data/fasta/chr19.fa.gz&quot;})
+
+regions = [(&quot;chr19&quot;, 1_000_000, 1_050_000), ...]      # your important/differential bins
+
+# 1. annotate one region
+ann = E.annotate_region(&quot;chr19&quot;, 1_000_000, 1_050_000, seg[&quot;placenta&quot;])
+#    -&gt; {&quot;dominant_state&quot;: &quot;TssA&quot;, &quot;composition&quot;: {...}, &quot;active_fraction&quot;: 0.9}
+
+# 2. test state enrichment vs a matched null
+nm  = E.NullModel(genome=genome, chroms=[&quot;chr19&quot;], seed=0)
+res, meta = E.enrichment_test(regions, seg[&quot;placenta&quot;], nm, by=&quot;group&quot;)
+#    -&gt; per-group log2 fold-enrichment, bootstrap CI, empirical p
+
+# 3. orthogonal histone-mark cross-check (independent of ChromHMM)
+from cfdna_chromatin import histone as H
+panel = H.load_mark_panel(&quot;data/histone&quot;, chroms=[&quot;chr19&quot;])   # 6 marks x 4 tissues
+mres, _ = H.mark_enrichment_test(regions, panel[&quot;placenta&quot;], nm)
+#    -&gt; per-mark peak-coverage log2 fold-enrichment vs the same matched null
+
+# 4. orthogonal open-chromatin cross-check (DNase-seq, also ChromHMM-independent)
+from cfdna_chromatin import accessibility as A
+apanel = A.load_access_panel(&quot;data/access&quot;, chroms=[&quot;chr19&quot;])  # 1 track x 5 tissues
+ares, _ = A.access_enrichment_test(regions, apanel[&quot;placenta&quot;], nm)
+#    -&gt; DNase peak-coverage log2 fold-enrichment vs the same matched null
+
+# 5. compartment attribution -- which cell-of-origin explains each region?
+from cfdna_chromatin import attribute as AT
+hpanel = H.load_mark_panel(&quot;data/histone&quot;, chroms=[&quot;chr19&quot;,&quot;chr20&quot;,&quot;chr21&quot;,&quot;chr22&quot;])
+per, summ = AT.attribute_signal(regions, hpanel, panel=&quot;fetal&quot;)
+#    -&gt; each region labelled signal / inflammation / background / ambiguous / unexplained
+#    -&gt; summ[&quot;signal_fraction&quot;] = how much of the set is cell-of-origin vs background
+
+# 6. importance/selection front-end -- rank bins by model attribution, then decompose
+from cfdna_chromatin import selection as SEL
+ranked = SEL.rank_by_shap(shap_df)              # samples x bins SHAP matrix -&gt; ranked bins
+#   (or SEL.rank_by_differential(matrix, labels) for a model-free Mann-Whitney ranking)
+regions = SEL.to_regions(ranked, top_n=100)     # feed the top bins straight into attribution
+res, J = SEL.compartment_importance_test(ranked, hpanel, panel=&quot;fetal&quot;)
+#    -&gt; res[&quot;signal_specific&quot;] / res[&quot;background_specific&quot;]: does importance concentrate in
+#       cell-of-origin or background chromatin, corrected for the genome-wide openness confound
+</code></pre>
+<h3 id="fetal-fraction-workflow-seqff-explain-your-own-model">Fetal-fraction workflow (seqFF++): explain your own model</h3>
+<p>If you already have a fitted fetal-fraction model, the whole SHAP → chromatin-biology
+chain runs from one command. Feature columns must be genomic-bin names
+(<code>chrX:start-end</code>) so the attribution is region-anchored.</p>
+<pre><code class="language-bash"># (A) hand it your model + feature matrix -- SHAP is computed locally
+python scripts/run_ff_shap.py --model ff_model.pkl --matrix X.csv --out ff_ranked.csv
+
+# (B) or a precomputed SHAP matrix (samples x bins) -- skip straight to the biology
+python scripts/run_ff_shap.py --shap shap_ff.csv
+
+# hg19 cohort? lift the ranked bins hg19-&gt;hg38 before the reference lookup (QC'd)
+python scripts/run_ff_shap.py --model ff_model.pkl --matrix X_hg19.csv --from-build hg19
+</code></pre>
+<pre><code class="language-python">from cfdna_chromatin import selection as SEL, liftover as LO
+
+# 1. region-anchored SHAP from YOUR model (explainer auto-selected:
+#    tree -&gt; TreeExplainer, linear -&gt; LinearExplainer, else KernelExplainer)
+sv = SEL.shap_from_model(model, X)          # -&gt; samples x bins signed SHAP frame
+ranked = SEL.rank_by_shap(sv)               # keep the sign: FF is directional
+
+# 2. hg19 -&gt; hg38 build crossing, coordinates only, with QC
+lifted, qc = LO.lift_regions(ranked, from_build=&quot;hg19&quot;, to_build=&quot;hg38&quot;)
+print(qc[&quot;mapping_rate&quot;])                    # fraction of bins that lifted cleanly
+
+# 3. placenta cell-of-origin positive control (fetal panel)
+res, J = SEL.compartment_importance_test(lifted, hpanel, panel=&quot;fetal&quot;)
+#    res[&quot;signal_specific&quot;] here reads as the placenta(signal)-vs-blood contrast:
+#    a real FF model's important regions should ENRICH placenta-specific chromatin.
+</code></pre>
+<p><strong>The placenta positive control is the key check.</strong> For a genuine fetal-fraction
+model, the SHAP-important regions should concentrate in <strong>placenta-specific</strong> open
+chromatin — the fetal cell-of-origin. If they instead point at maternal blood, the
+model is likely riding a coverage/GC artifact rather than fetal biology, and
+<code>run_ff_shap.py</code> flags that explicitly.</p>
+<p>For the recommended hg19 workflow — pre-lifting the small, static reference tracks
+<em>down</em> to hg19 once, so the whole analysis runs hg19-native — use
+<code>liftover.lift_reference_bed()</code> on each shipped reference BED and run with
+<code>--from-build hg38</code> against the resulting hg19 bundle.</p>
+<h3 id="application-panels">Application panels</h3>
+<p>The chromatin engine is <strong>feature-agnostic</strong> — it scores any per-region set against
+any reference. A <em>panel</em> (<code>references.PANELS</code>) declares which references to load for one
+cfDNA application and what role each plays. The bundled panel is:</p>
+<ul>
+<li><strong><code>fetal</code></strong> — placental (fetal) signal on a maternal hematopoietic + solid-tissue
+  background (seqFF++ fetal fraction). <code>attribute_signal(..., panel="fetal")</code> labels each
+  region <strong>signal</strong> (cell-of-origin), <strong>inflammation</strong> (activated-myeloid axis),
+  <strong>background</strong> (resting hematopoietic), <strong>ambiguous</strong>, or <strong>unexplained</strong>, and
+  <code>compartment_importance_test</code> reports whether SHAP importance concentrates in the
+  placenta cell-of-origin compartment once the genome-wide openness confound is removed.</li>
+</ul>
+<p>The engine itself is panel-agnostic: additional panels can be declared from the bundled
+references without touching the engine code.</p>
+<h3 id="tissue-of-origin-track-seqff">Tissue-of-origin track (seqFF++)</h3>
+<p><code>analysis/fetal_fraction/</code> carries an end-to-end tissue-of-origin readout that maps
+per-feature |SHAP| from a fitted fetal-fraction model onto a 9-tissue hg19 50 kb
+openness atlas and asks <strong>which tissue's specific open chromatin the important bins
+concentrate in</strong> — placenta should lead for a genuine FF model.</p>
+<pre><code class="language-bash"># extract per-feature |SHAP| from a glmnet FF model in place (no per-patient data leaves)
+Rscript analysis/fetal_fraction/extract_ff_shap.R --model ff_model.rds --x X.csv --out ff_shap.csv
+# score against the shipped atlas
+python analysis/fetal_fraction/run_ff_tissue_track.py --importance ff_shap.csv --outdir out_ff_tissue
+</code></pre>
+<p>See <code>analysis/fetal_fraction/FF_IMPLEMENTATION.md</code> for the full AWS-instance recipe and
+<code>analysis/fetal_fraction/reference/README.md</code> for the atlas layout.</p>
+<h2 id="reference-epigenomes">Reference epigenomes</h2>
+<p>Roadmap/EpiMap ChromHMM 18-state model (identical vocabulary across all four):</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>ENCODE accession</th>
+<th>Biosample</th>
+<th>Role in cfDNA context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>placenta</td>
+<td>ENCFF024IDF</td>
+<td>placenta male embryo (85 d)</td>
+<td>fetal signal (<code>fetal</code>)</td>
+</tr>
+<tr>
+<td>keratinocyte</td>
+<td>ENCFF131MHN</td>
+<td>keratinocyte</td>
+<td>epithelial reference track</td>
+</tr>
+<tr>
+<td>neutrophil</td>
+<td>ENCFF412COT</td>
+<td>neutrophil male</td>
+<td>hematopoietic background</td>
+</tr>
+<tr>
+<td>Bcell</td>
+<td>ENCFF004HFC</td>
+<td>B cell female adult</td>
+<td>hematopoietic background</td>
+</tr>
+<tr>
+<td>monocyte</td>
+<td>(histone/DNase only)</td>
+<td>CD14+ monocyte</td>
+<td>activated-myeloid / inflammation axis</td>
+</tr>
+<tr>
+<td>K562</td>
+<td>ENCFF026ZCC</td>
+<td>K562</td>
+<td>unrelated-lineage control</td>
+</tr>
+</tbody>
+</table>
+<p>All ChromHMM segmentations share the identical 18-state EpiMap vocabulary; each tissue
+also carries 6 histone marks + a DNase track (monocyte has histone + DNase only — no
+18-state ChromHMM exists for it). See <a href="docs/data_provenance.md">docs/data_provenance.md</a>
+for full provenance, accessions, and the two documented monocyte caveats.</p>
+<h2 id="layout">Layout</h2>
+<pre><code>src/cfdna_chromatin/    engine, references, genome, histone, accessibility,
+                        attribute (compartment attribution), benchmark,
+                        selection (importance front-end + shap_from_model),
+                        liftover (hg19&lt;-&gt;hg38 build crossing)
+scripts/                fetch_fasta.py, fetch_histone.py, fetch_access.py,
+                        fetch_ff_reference.py, run_demo.py,
+                        run_ff_shap.py (fetal-fraction SHAP -&gt; placenta biology),
+                        run_shap_decomposition.py
+analysis/fetal_fraction/ tissue-of-origin track: build_openness_atlas.py,
+                        extract_ff_shap.R, run_ff_tissue_track.py,
+                        ff_tissue_proportion.py, reference/ (shipped hg19 atlas)
+tests/                  fast unit tests (no network/FASTA needed)
+data/                   ChromHMM reference BEDs; histone/ ChIP-seq + access/ DNase
+                        peak subsets (FASTA fetched into data/fasta/)
+examples/               housekeeping-gene TSS windows used by the demo
+docs/                   benchmarking design, provenance, figures
+</code></pre>
+<h2 id="benchmarking-roadmap">Benchmarking roadmap</h2>
+<p>This release implements <strong>B1 (calibration)</strong> and the <strong>B2 positive control</strong>. The
+full four-tier strategy — B2 negative controls, B3 recovery of known cfDNA biology
+(placental vs. hematopoietic, direction-aware), B4 orthogonal ground truth (held-out
+ENCODE tissue + WGBS methylation cross-check) — is specified in
+<a href="docs/benchmarking.md">docs/benchmarking.md</a>.</p>
+<h2 id="license">License</h2>
+<p>MIT — see <a href="LICENSE">LICENSE</a>.</p>
+</body></html>
