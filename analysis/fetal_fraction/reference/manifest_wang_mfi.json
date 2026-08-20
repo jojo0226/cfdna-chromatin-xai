@@ -1,0 +1,327 @@
+{
+  "atlas": "wang_mfi_openness_hg19_50kb",
+  "source": "Wang et al. Nature 653:167-179 (2026), doi:10.1038/s41586-026-10316-x; cell.ucsf.edu/snPlacenta",
+  "assembly": "hg19",
+  "bin_size_bp": 50000,
+  "prefix": "W_",
+  "aggregated_from": "wang_mfi_win5kb_hg19.h5ad",
+  "n_bins": 57633,
+  "n_bins_mapped": 53727,
+  "grid_coverage_frac": 0.9322,
+  "grid_join": "window midpoint -> floor(mid/50000)*50000 (starts are hg38-lifted, phase-offset)",
+  "normalization": "CPM (per cell-type total_fragments) -> log1p -> z-score across bins per cell type",
+  "n_celltypes": 33,
+  "origin_composites": {
+    "clean_purity_threshold": 0.9,
+    "built_from": "row-centered specificity (z - per-bin mean across cell types)",
+    "fetal_celltypes": [
+      "GC",
+      "EVT",
+      "proEVT",
+      "SCT",
+      "SCT_A",
+      "SCT_B",
+      "proSCT",
+      "VCT",
+      "cycling_VCT",
+      "avVCT",
+      "eEVT",
+      "iEVT",
+      "pEVT"
+    ],
+    "maternal_celltypes": [
+      "CD16_M",
+      "DSC_A",
+      "DSC_B",
+      "LEC",
+      "Epi",
+      "cilated",
+      "eS",
+      "uDSC"
+    ]
+  },
+  "ambiguous_celltypes": [
+    "B",
+    "Ery",
+    "FB",
+    "pvSMC",
+    "T",
+    "cDC",
+    "dNK"
+  ],
+  "low_n_celltypes": [
+    "B",
+    "Ery",
+    "aEC",
+    "cDC",
+    "cilated",
+    "eEVT",
+    "pEVT"
+  ],
+  "celltypes": {
+    "B": {
+      "origin": "Maternal",
+      "origin_purity": 0.659,
+      "n_cells": 358,
+      "total_fragments": 6065914,
+      "ambiguous": true,
+      "low_n": true
+    },
+    "CD14_M": {
+      "origin": "Maternal",
+      "origin_purity": 0.889,
+      "n_cells": 7433,
+      "total_fragments": 141095968,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "CD16_M": {
+      "origin": "Maternal",
+      "origin_purity": 0.939,
+      "n_cells": 2063,
+      "total_fragments": 45280442,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "GC": {
+      "origin": "Fetal",
+      "origin_purity": 0.929,
+      "n_cells": 1600,
+      "total_fragments": 49085148,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "DSC_A": {
+      "origin": "Maternal",
+      "origin_purity": 0.902,
+      "n_cells": 7177,
+      "total_fragments": 234868212,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "DSC_B": {
+      "origin": "Maternal",
+      "origin_purity": 0.993,
+      "n_cells": 5617,
+      "total_fragments": 201299160,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "EVT": {
+      "origin": "Fetal",
+      "origin_purity": 0.999,
+      "n_cells": 2365,
+      "total_fragments": 103684678,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "proEVT": {
+      "origin": "Fetal",
+      "origin_purity": 0.949,
+      "n_cells": 1846,
+      "total_fragments": 64718724,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "fEC": {
+      "origin": "Fetal",
+      "origin_purity": 0.868,
+      "n_cells": 3032,
+      "total_fragments": 83051240,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "LEC": {
+      "origin": "Maternal",
+      "origin_purity": 1.0,
+      "n_cells": 1828,
+      "total_fragments": 53600570,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "Epi": {
+      "origin": "Maternal",
+      "origin_purity": 0.991,
+      "n_cells": 32345,
+      "total_fragments": 646772308,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "Ery": {
+      "origin": "Fetal",
+      "origin_purity": 0.612,
+      "n_cells": 67,
+      "total_fragments": 1036020,
+      "ambiguous": true,
+      "low_n": true
+    },
+    "FB": {
+      "origin": "Fetal",
+      "origin_purity": 0.553,
+      "n_cells": 3245,
+      "total_fragments": 111566202,
+      "ambiguous": true,
+      "low_n": false
+    },
+    "vEC": {
+      "origin": "Maternal",
+      "origin_purity": 0.8,
+      "n_cells": 3017,
+      "total_fragments": 91442906,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "pvSMC": {
+      "origin": "Maternal",
+      "origin_purity": 0.456,
+      "n_cells": 2918,
+      "total_fragments": 83197194,
+      "ambiguous": true,
+      "low_n": false
+    },
+    "SCT": {
+      "origin": "Fetal",
+      "origin_purity": 1.0,
+      "n_cells": 63371,
+      "total_fragments": 1157125158,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "SCT_A": {
+      "origin": "Fetal",
+      "origin_purity": 1.0,
+      "n_cells": 3698,
+      "total_fragments": 84164978,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "SCT_B": {
+      "origin": "Fetal",
+      "origin_purity": 1.0,
+      "n_cells": 3373,
+      "total_fragments": 50222026,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "proSCT": {
+      "origin": "Fetal",
+      "origin_purity": 0.997,
+      "n_cells": 1055,
+      "total_fragments": 27009516,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "T": {
+      "origin": "Maternal",
+      "origin_purity": 0.689,
+      "n_cells": 1118,
+      "total_fragments": 15309780,
+      "ambiguous": true,
+      "low_n": false
+    },
+    "VCT": {
+      "origin": "Fetal",
+      "origin_purity": 0.999,
+      "n_cells": 10346,
+      "total_fragments": 259309828,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "cycling_VCT": {
+      "origin": "Fetal",
+      "origin_purity": 0.959,
+      "n_cells": 3265,
+      "total_fragments": 118335388,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "aEC": {
+      "origin": "Maternal",
+      "origin_purity": 0.781,
+      "n_cells": 497,
+      "total_fragments": 19123950,
+      "ambiguous": false,
+      "low_n": true
+    },
+    "avVCT": {
+      "origin": "Fetal",
+      "origin_purity": 0.964,
+      "n_cells": 1686,
+      "total_fragments": 42399374,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "cDC": {
+      "origin": "Unknown",
+      "origin_purity": 0.507,
+      "n_cells": 440,
+      "total_fragments": 13329920,
+      "ambiguous": true,
+      "low_n": true
+    },
+    "cilated": {
+      "origin": "Maternal",
+      "origin_purity": 1.0,
+      "n_cells": 227,
+      "total_fragments": 8013688,
+      "ambiguous": false,
+      "low_n": true
+    },
+    "dNK": {
+      "origin": "Maternal",
+      "origin_purity": 0.666,
+      "n_cells": 9687,
+      "total_fragments": 164112586,
+      "ambiguous": true,
+      "low_n": false
+    },
+    "eS": {
+      "origin": "Maternal",
+      "origin_purity": 0.994,
+      "n_cells": 4059,
+      "total_fragments": 98448682,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "eEVT": {
+      "origin": "Fetal",
+      "origin_purity": 1.0,
+      "n_cells": 470,
+      "total_fragments": 14231454,
+      "ambiguous": false,
+      "low_n": true
+    },
+    "iEVT": {
+      "origin": "Fetal",
+      "origin_purity": 1.0,
+      "n_cells": 2576,
+      "total_fragments": 130457322,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "uDSC": {
+      "origin": "Maternal",
+      "origin_purity": 0.99,
+      "n_cells": 7785,
+      "total_fragments": 205922974,
+      "ambiguous": false,
+      "low_n": false
+    },
+    "pEVT": {
+      "origin": "Fetal",
+      "origin_purity": 0.968,
+      "n_cells": 221,
+      "total_fragments": 14421860,
+      "ambiguous": false,
+      "low_n": true
+    },
+    "HB": {
+      "origin": "Fetal",
+      "origin_purity": 0.803,
+      "n_cells": 2950,
+      "total_fragments": 61552840,
+      "ambiguous": false,
+      "low_n": false
+    }
+  }
+}

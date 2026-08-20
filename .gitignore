@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Large / re-downloadable reference sequence (fetched by scripts/fetch_fasta.py)
+data/fasta/
+*.fa
+*.fa.gz
+!data/*.bed.gz
+!data/histone/*.bed.gz
+!data/access/*.bed.gz
+
+# Genome-wide raw peaks (chr19-22 subsets are shipped in data/histone/ and
+# data/access/; full-genome peaks are re-downloadable via the fetch scripts)
+data/histone_raw/
+data/access_raw/
+data/squamous_raw/
+data/inflam_raw/
+
+# Outputs
+out/
+*.log
+.DS_Store
+
+# Regenerable demo staging (large intermediate CSVs; figures/results kept in _wang_demo)
+analysis/fetal_fraction/_fig_demo/
+analysis/fetal_fraction/out_*/
+analysis/fetal_fraction/pc_tissue_out/
+analysis/fetal_fraction/pc_origin_out/
+analysis/fetal_fraction/ff_signed_sets/
+.venv/
+venv/
+
+
+# Fetal-fraction reference peaks. As of v0.6.2 the 72 public-ENCODE DNase-seq
+# source BEDs (data/access_ff/, hg19 4-col narrowPeak + encode_accessions.json)
+# ARE shipped so the curated73 atlas is fully reconstructable offline; the 73rd
+# track (neutrophil) ships under data/neutrophil_dnase/. The bulky _raw staging
+# dirs and the unused histone_ff tracks remain out (re-fetchable via
+# scripts/fetch_ff_atlas_beds.py).
+data/access_ff_raw/
+
+data/histone_ff_raw/
+data/histone_ff/

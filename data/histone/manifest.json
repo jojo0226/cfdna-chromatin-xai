@@ -1,0 +1,374 @@
+[
+  {
+    "tissue": "placenta",
+    "mark": "H3K4me1",
+    "file_acc": "ENCFF033NSH",
+    "exp": "ENCSR194ZHE",
+    "output_type": "pseudoreplicated peaks",
+    "peaks_chr19_22": 13328,
+    "file": "placenta_H3K4me1_ENCFF033NSH.bed.gz",
+    "size": 146823
+  },
+  {
+    "tissue": "placenta",
+    "mark": "H3K4me3",
+    "file_acc": "ENCFF364CUW",
+    "exp": "ENCSR074FPH",
+    "output_type": "pseudoreplicated peaks",
+    "peaks_chr19_22": 3052,
+    "file": "placenta_H3K4me3_ENCFF364CUW.bed.gz",
+    "size": 37676
+  },
+  {
+    "tissue": "placenta",
+    "mark": "H3K27ac",
+    "file_acc": "ENCFF825OIT",
+    "exp": "ENCSR028QEA",
+    "output_type": "pseudoreplicated peaks",
+    "peaks_chr19_22": 8973,
+    "file": "placenta_H3K27ac_ENCFF825OIT.bed.gz",
+    "size": 102444
+  },
+  {
+    "tissue": "placenta",
+    "mark": "H3K36me3",
+    "file_acc": "ENCFF098OVM",
+    "exp": "ENCSR131EED",
+    "output_type": "pseudoreplicated peaks",
+    "peaks_chr19_22": 17411,
+    "file": "placenta_H3K36me3_ENCFF098OVM.bed.gz",
+    "size": 174742
+  },
+  {
+    "tissue": "placenta",
+    "mark": "H3K27me3",
+    "file_acc": "ENCFF253ZCO",
+    "exp": "ENCSR273NXD",
+    "output_type": "pseudoreplicated peaks",
+    "peaks_chr19_22": 7036,
+    "file": "placenta_H3K27me3_ENCFF253ZCO.bed.gz",
+    "size": 75866
+  },
+  {
+    "tissue": "placenta",
+    "mark": "H3K9me3",
+    "file_acc": "ENCFF500KJB",
+    "exp": "ENCSR451EKU",
+    "output_type": "pseudoreplicated peaks",
+    "peaks_chr19_22": 3443,
+    "file": "placenta_H3K9me3_ENCFF500KJB.bed.gz",
+    "size": 36186
+  },
+  {
+    "tissue": "neutrophil",
+    "mark": "H3K4me1",
+    "file_acc": "ENCFF027ZFN",
+    "exp": "ENCSR586POT",
+    "output_type": "pseudoreplicated peaks",
+    "peaks_chr19_22": 9703,
+    "file": "neutrophil_H3K4me1_ENCFF027ZFN.bed.gz",
+    "size": 106912
+  },
+  {
+    "tissue": "neutrophil",
+    "mark": "H3K4me3",
+    "file_acc": "ENCFF034EAT",
+    "exp": "ENCSR393SYU",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 4332,
+    "file": "neutrophil_H3K4me3_ENCFF034EAT.bed.gz",
+    "size": 52285
+  },
+  {
+    "tissue": "neutrophil",
+    "mark": "H3K27ac",
+    "file_acc": "ENCFF700XOU",
+    "exp": "ENCSR267YXV",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 3917,
+    "file": "neutrophil_H3K27ac_ENCFF700XOU.bed.gz",
+    "size": 49644
+  },
+  {
+    "tissue": "neutrophil",
+    "mark": "H3K36me3",
+    "file_acc": "ENCFF394EJS",
+    "exp": "ENCSR072QBN",
+    "output_type": "pseudoreplicated peaks",
+    "peaks_chr19_22": 11788,
+    "file": "neutrophil_H3K36me3_ENCFF394EJS.bed.gz",
+    "size": 123711
+  },
+  {
+    "tissue": "neutrophil",
+    "mark": "H3K27me3",
+    "file_acc": "ENCFF943MHW",
+    "exp": "ENCSR058FCG",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 9235,
+    "file": "neutrophil_H3K27me3_ENCFF943MHW.bed.gz",
+    "size": 100794
+  },
+  {
+    "tissue": "neutrophil",
+    "mark": "H3K9me3",
+    "file_acc": "ENCFF457BIG",
+    "exp": "ENCSR437MHW",
+    "output_type": "pseudoreplicated peaks",
+    "peaks_chr19_22": 9578,
+    "file": "neutrophil_H3K9me3_ENCFF457BIG.bed.gz",
+    "size": 98184
+  },
+  {
+    "tissue": "Bcell",
+    "mark": "H3K4me1",
+    "file_acc": "ENCFF597PDX",
+    "exp": "ENCSR214VUB",
+    "output_type": "pseudoreplicated peaks",
+    "peaks_chr19_22": 12093,
+    "file": "Bcell_H3K4me1_ENCFF597PDX.bed.gz",
+    "size": 135412
+  },
+  {
+    "tissue": "Bcell",
+    "mark": "H3K4me3",
+    "file_acc": "ENCFF258BVG",
+    "exp": "ENCSR000DQP",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 4238,
+    "file": "Bcell_H3K4me3_ENCFF258BVG.bed.gz",
+    "size": 51101
+  },
+  {
+    "tissue": "Bcell",
+    "mark": "H3K27ac",
+    "file_acc": "ENCFF574RPF",
+    "exp": "ENCSR000AUP",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 4974,
+    "file": "Bcell_H3K27ac_ENCFF574RPF.bed.gz",
+    "size": 60603
+  },
+  {
+    "tissue": "Bcell",
+    "mark": "H3K36me3",
+    "file_acc": "ENCFF571FZW",
+    "exp": "ENCSR424XBP",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 6134,
+    "file": "Bcell_H3K36me3_ENCFF571FZW.bed.gz",
+    "size": 64566
+  },
+  {
+    "tissue": "Bcell",
+    "mark": "H3K27me3",
+    "file_acc": "ENCFF672BJI",
+    "exp": "ENCSR162DGX",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 1832,
+    "file": "Bcell_H3K27me3_ENCFF672BJI.bed.gz",
+    "size": 20016
+  },
+  {
+    "tissue": "Bcell",
+    "mark": "H3K9me3",
+    "file_acc": "ENCFF003LKR",
+    "exp": "ENCSR005WWZ",
+    "output_type": "pseudoreplicated peaks",
+    "peaks_chr19_22": 3045,
+    "file": "Bcell_H3K9me3_ENCFF003LKR.bed.gz",
+    "size": 32686
+  },
+  {
+    "tissue": "K562",
+    "mark": "H3K4me1",
+    "file_acc": "ENCFF135ZLM",
+    "exp": "ENCSR000AKS",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 10374,
+    "file": "K562_H3K4me1_ENCFF135ZLM.bed.gz",
+    "size": 115417
+  },
+  {
+    "tissue": "K562",
+    "mark": "H3K4me3",
+    "file_acc": "ENCFF909PMV",
+    "exp": "ENCSR000AKU",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 5523,
+    "file": "K562_H3K4me3_ENCFF909PMV.bed.gz",
+    "size": 64167
+  },
+  {
+    "tissue": "K562",
+    "mark": "H3K27ac",
+    "file_acc": "ENCFF038DDS",
+    "exp": "ENCSR000AKP",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 6697,
+    "file": "K562_H3K27ac_ENCFF038DDS.bed.gz",
+    "size": 77361
+  },
+  {
+    "tissue": "K562",
+    "mark": "H3K36me3",
+    "file_acc": "ENCFF053DAC",
+    "exp": "ENCSR000AKR",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 9652,
+    "file": "K562_H3K36me3_ENCFF053DAC.bed.gz",
+    "size": 99416
+  },
+  {
+    "tissue": "K562",
+    "mark": "H3K27me3",
+    "file_acc": "ENCFF049HUP",
+    "exp": "ENCSR000AKQ",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 7057,
+    "file": "K562_H3K27me3_ENCFF049HUP.bed.gz",
+    "size": 69716
+  },
+  {
+    "tissue": "K562",
+    "mark": "H3K9me3",
+    "file_acc": "ENCFF371GMJ",
+    "exp": "ENCSR000APE",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 916,
+    "file": "K562_H3K9me3_ENCFF371GMJ.bed.gz",
+    "size": 10091
+  },
+  {
+    "tissue": "keratinocyte",
+    "mark": "H3K4me3",
+    "file_acc": "ENCFF547PJT",
+    "exp": "ENCSR000ALO",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 4740,
+    "file": "keratinocyte_H3K4me3_ENCFF547PJT.bed.gz",
+    "size": 54726
+  },
+  {
+    "tissue": "keratinocyte",
+    "mark": "H3K4me1",
+    "file_acc": "ENCFF777MBD",
+    "exp": "ENCSR000ALI",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 9743,
+    "file": "keratinocyte_H3K4me1_ENCFF777MBD.bed.gz",
+    "size": 107144
+  },
+  {
+    "tissue": "keratinocyte",
+    "mark": "H3K27ac",
+    "file_acc": "ENCFF578GNF",
+    "exp": "ENCSR000ALK",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 5331,
+    "file": "keratinocyte_H3K27ac_ENCFF578GNF.bed.gz",
+    "size": 62379
+  },
+  {
+    "tissue": "keratinocyte",
+    "mark": "H3K36me3",
+    "file_acc": "ENCFF933KAE",
+    "exp": "ENCSR000ALM",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 9930,
+    "file": "keratinocyte_H3K36me3_ENCFF933KAE.bed.gz",
+    "size": 98674
+  },
+  {
+    "tissue": "keratinocyte",
+    "mark": "H3K27me3",
+    "file_acc": "ENCFF660YCE",
+    "exp": "ENCSR000ALL",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 5747,
+    "file": "keratinocyte_H3K27me3_ENCFF660YCE.bed.gz",
+    "size": 59937
+  },
+  {
+    "tissue": "keratinocyte",
+    "mark": "H3K9me3",
+    "file_acc": "ENCFF737VLP",
+    "exp": "ENCSR000ARN",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 5529,
+    "file": "keratinocyte_H3K9me3_ENCFF737VLP.bed.gz",
+    "size": 55827
+  },
+  {
+    "tissue": "monocyte",
+    "mark": "H3K4me3",
+    "file_acc": "ENCFF112PES",
+    "exp": "ENCSR000ASN",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 7119,
+    "file": "monocyte_H3K4me3_ENCFF112PES.bed.gz",
+    "size": 85546,
+    "role": "inflammation",
+    "note": "CD14+ monocyte; activated-myeloid/inflammation axis"
+  },
+  {
+    "tissue": "monocyte",
+    "mark": "H3K4me1",
+    "file_acc": "ENCFF493TKQ",
+    "exp": "ENCSR000ASM",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 9923,
+    "file": "monocyte_H3K4me1_ENCFF493TKQ.bed.gz",
+    "size": 115518,
+    "role": "inflammation",
+    "note": "CD14+ monocyte; activated-myeloid/inflammation axis"
+  },
+  {
+    "tissue": "monocyte",
+    "mark": "H3K27ac",
+    "file_acc": "ENCFF560PQQ",
+    "exp": "ENCSR000ASJ",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 9046,
+    "file": "monocyte_H3K27ac_ENCFF560PQQ.bed.gz",
+    "size": 104595,
+    "role": "inflammation",
+    "note": "CD14+ monocyte; activated-myeloid/inflammation axis"
+  },
+  {
+    "tissue": "monocyte",
+    "mark": "H3K36me3",
+    "file_acc": "ENCFF399HUL",
+    "exp": "ENCSR000ASL",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 12209,
+    "file": "monocyte_H3K36me3_ENCFF399HUL.bed.gz",
+    "size": 132988,
+    "role": "inflammation",
+    "note": "CD14+ monocyte; activated-myeloid/inflammation axis"
+  },
+  {
+    "tissue": "monocyte",
+    "mark": "H3K27me3",
+    "file_acc": "ENCFF946MXS",
+    "exp": "ENCSR000ASK",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 7708,
+    "file": "monocyte_H3K27me3_ENCFF946MXS.bed.gz",
+    "size": 82647,
+    "role": "inflammation",
+    "note": "CD14+ monocyte; activated-myeloid/inflammation axis"
+  },
+  {
+    "tissue": "monocyte",
+    "mark": "H3K9me3",
+    "file_acc": "ENCFF880MAU",
+    "exp": "ENCSR000ASP",
+    "output_type": "replicated peaks",
+    "peaks_chr19_22": 10256,
+    "file": "monocyte_H3K9me3_ENCFF880MAU.bed.gz",
+    "size": 108111,
+    "role": "inflammation",
+    "note": "CD14+ monocyte; activated-myeloid/inflammation axis"
+  }
+]

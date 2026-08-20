@@ -1,0 +1,9 @@
+{
+  "n_pcs": 100,
+  "n_tissues": 6,
+  "n_shared_bins": 57633,
+  "topn": 2000,
+  "n_pos": 2000,
+  "n_neg": 2000,
+  "tissues": ["EVT", "Endothelial", "Erythroid", "Fibroblast", "STB", "vCTB"]
+}

@@ -1,0 +1,1262 @@
+{
+  "assembly": "hg19",
+  "assay": "DNase-seq",
+  "source": "ENCODE public API",
+  "query": "https://www.encodeproject.org/search/?type=Experiment&assay_title=DNase-seq&assembly=hg19&status=released&limit=all&format=json&field=accession&field=biosample_ontology.term_name&field=biosample_ontology.classification&field=files.@id&field=files.file_type&field=files.assembly&field=files.output_type&field=files.status&field=files.href&field=files.file_format",
+  "max_reps": 3,
+  "tissues": {
+    "B cell": {
+      "classification": "primary cell",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF159HJV",
+          "output_type": "peaks",
+          "path": "B_cell_DNase_ENCFF159HJV.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF263YRO",
+          "output_type": "peaks",
+          "path": "B_cell_DNase_ENCFF263YRO.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF403PJS",
+          "output_type": "peaks",
+          "path": "B_cell_DNase_ENCFF403PJS.bed.gz"
+        }
+      ]
+    },
+    "CD14-positive monocyte": {
+      "classification": "primary cell",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF063IUG",
+          "output_type": "peaks",
+          "path": "CD14_positive_monocyte_DNase_ENCFF063IUG.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF289XSM",
+          "output_type": "peaks",
+          "path": "CD14_positive_monocyte_DNase_ENCFF289XSM.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF363XGK",
+          "output_type": "peaks",
+          "path": "CD14_positive_monocyte_DNase_ENCFF363XGK.bed.gz"
+        }
+      ]
+    },
+    "CD4-positive, alpha-beta T cell": {
+      "classification": "primary cell",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF023ZMS",
+          "output_type": "peaks",
+          "path": "CD4_positive_alpha_beta_T_cell_DNase_ENCFF023ZMS.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF109RSW",
+          "output_type": "peaks",
+          "path": "CD4_positive_alpha_beta_T_cell_DNase_ENCFF109RSW.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF191WFG",
+          "output_type": "peaks",
+          "path": "CD4_positive_alpha_beta_T_cell_DNase_ENCFF191WFG.bed.gz"
+        }
+      ]
+    },
+    "CD8-positive, alpha-beta T cell": {
+      "classification": "primary cell",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF109VIJ",
+          "output_type": "peaks",
+          "path": "CD8_positive_alpha_beta_T_cell_DNase_ENCFF109VIJ.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF512IML",
+          "output_type": "peaks",
+          "path": "CD8_positive_alpha_beta_T_cell_DNase_ENCFF512IML.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF566SXQ",
+          "output_type": "peaks",
+          "path": "CD8_positive_alpha_beta_T_cell_DNase_ENCFF566SXQ.bed.gz"
+        }
+      ]
+    },
+    "Peyer's patch": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF055ZSF",
+          "output_type": "peaks",
+          "path": "Peyer_s_patch_DNase_ENCFF055ZSF.bed.gz"
+        }
+      ]
+    },
+    "adrenal gland": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF094AUJ",
+          "output_type": "peaks",
+          "path": "adrenal_gland_DNase_ENCFF094AUJ.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF179WUI",
+          "output_type": "peaks",
+          "path": "adrenal_gland_DNase_ENCFF179WUI.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF215UXZ",
+          "output_type": "peaks",
+          "path": "adrenal_gland_DNase_ENCFF215UXZ.bed.gz"
+        }
+      ]
+    },
+    "brain": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF103UPI",
+          "output_type": "peaks",
+          "path": "brain_DNase_ENCFF103UPI.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF205KSG",
+          "output_type": "peaks",
+          "path": "brain_DNase_ENCFF205KSG.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF207IYJ",
+          "output_type": "peaks",
+          "path": "brain_DNase_ENCFF207IYJ.bed.gz"
+        }
+      ]
+    },
+    "cerebellum": {
+      "classification": "tissue",
+      "n_rep": 2,
+      "files": [
+        {
+          "file_accession": "ENCFF455ZGC",
+          "output_type": "peaks",
+          "path": "cerebellum_DNase_ENCFF455ZGC.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF952ETG",
+          "output_type": "peaks",
+          "path": "cerebellum_DNase_ENCFF952ETG.bed.gz"
+        }
+      ]
+    },
+    "chorion": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF772FRH",
+          "output_type": "peaks",
+          "path": "chorion_DNase_ENCFF772FRH.bed.gz"
+        }
+      ]
+    },
+    "common myeloid progenitor, CD34-positive": {
+      "classification": "primary cell",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF024DAR",
+          "output_type": "peaks",
+          "path": "common_myeloid_progenitor_CD34_positive_DNase_ENCFF024DAR.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF059VUS",
+          "output_type": "peaks",
+          "path": "common_myeloid_progenitor_CD34_positive_DNase_ENCFF059VUS.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF110CYC",
+          "output_type": "peaks",
+          "path": "common_myeloid_progenitor_CD34_positive_DNase_ENCFF110CYC.bed.gz"
+        }
+      ]
+    },
+    "coronary artery": {
+      "classification": "tissue",
+      "n_rep": 2,
+      "files": [
+        {
+          "file_accession": "ENCFF021ZDC",
+          "output_type": "peaks",
+          "path": "coronary_artery_DNase_ENCFF021ZDC.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF739ASH",
+          "output_type": "peaks",
+          "path": "coronary_artery_DNase_ENCFF739ASH.bed.gz"
+        }
+      ]
+    },
+    "dermis blood vessel endothelial cell": {
+      "classification": "primary cell",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF045UNP",
+          "output_type": "peaks",
+          "path": "dermis_blood_vessel_endothelial_cell_DNase_ENCFF045UNP.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF084LGH",
+          "output_type": "peaks",
+          "path": "dermis_blood_vessel_endothelial_cell_DNase_ENCFF084LGH.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF419NYS",
+          "output_type": "peaks",
+          "path": "dermis_blood_vessel_endothelial_cell_DNase_ENCFF419NYS.bed.gz"
+        }
+      ]
+    },
+    "endothelial cell of umbilical vein": {
+      "classification": "primary cell",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF097KBE",
+          "output_type": "peaks",
+          "path": "endothelial_cell_of_umbilical_vein_DNase_ENCFF097KBE.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF330HEK",
+          "output_type": "peaks",
+          "path": "endothelial_cell_of_umbilical_vein_DNase_ENCFF330HEK.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF382IRS",
+          "output_type": "peaks",
+          "path": "endothelial_cell_of_umbilical_vein_DNase_ENCFF382IRS.bed.gz"
+        }
+      ]
+    },
+    "esophagus muscularis mucosa": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF747AGO",
+          "output_type": "peaks",
+          "path": "esophagus_muscularis_mucosa_DNase_ENCFF747AGO.bed.gz"
+        }
+      ]
+    },
+    "esophagus squamous epithelium": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF197ZNE",
+          "output_type": "peaks",
+          "path": "esophagus_squamous_epithelium_DNase_ENCFF197ZNE.bed.gz"
+        }
+      ]
+    },
+    "eye": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF600YFF",
+          "output_type": "peaks",
+          "path": "eye_DNase_ENCFF600YFF.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF720MLF",
+          "output_type": "peaks",
+          "path": "eye_DNase_ENCFF720MLF.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF984RUT",
+          "output_type": "peaks",
+          "path": "eye_DNase_ENCFF984RUT.bed.gz"
+        }
+      ]
+    },
+    "femur": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF760NDX",
+          "output_type": "peaks",
+          "path": "femur_DNase_ENCFF760NDX.bed.gz"
+        }
+      ]
+    },
+    "forelimb muscle": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF850STV",
+          "output_type": "peaks",
+          "path": "forelimb_muscle_DNase_ENCFF850STV.bed.gz"
+        }
+      ]
+    },
+    "frontal cortex": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF101NVD",
+          "output_type": "peaks",
+          "path": "frontal_cortex_DNase_ENCFF101NVD.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF144EGT",
+          "output_type": "peaks",
+          "path": "frontal_cortex_DNase_ENCFF144EGT.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF281ASO",
+          "output_type": "peaks",
+          "path": "frontal_cortex_DNase_ENCFF281ASO.bed.gz"
+        }
+      ]
+    },
+    "germinal center": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF025VVW",
+          "output_type": "peaks",
+          "path": "germinal_center_DNase_ENCFF025VVW.bed.gz"
+        }
+      ]
+    },
+    "heart": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF007RSQ",
+          "output_type": "peaks",
+          "path": "heart_DNase_ENCFF007RSQ.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF053SED",
+          "output_type": "peaks",
+          "path": "heart_DNase_ENCFF053SED.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF086KUU",
+          "output_type": "peaks",
+          "path": "heart_DNase_ENCFF086KUU.bed.gz"
+        }
+      ]
+    },
+    "heart left ventricle": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF224GQJ",
+          "output_type": "peaks",
+          "path": "heart_left_ventricle_DNase_ENCFF224GQJ.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF409QXF",
+          "output_type": "peaks",
+          "path": "heart_left_ventricle_DNase_ENCFF409QXF.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF520HKD",
+          "output_type": "peaks",
+          "path": "heart_left_ventricle_DNase_ENCFF520HKD.bed.gz"
+        }
+      ]
+    },
+    "heart right ventricle": {
+      "classification": "tissue",
+      "n_rep": 2,
+      "files": [
+        {
+          "file_accession": "ENCFF250FRA",
+          "output_type": "peaks",
+          "path": "heart_right_ventricle_DNase_ENCFF250FRA.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF687FIQ",
+          "output_type": "peaks",
+          "path": "heart_right_ventricle_DNase_ENCFF687FIQ.bed.gz"
+        }
+      ]
+    },
+    "hindlimb muscle": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF903ULR",
+          "output_type": "peaks",
+          "path": "hindlimb_muscle_DNase_ENCFF903ULR.bed.gz"
+        }
+      ]
+    },
+    "kidney": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF050XEY",
+          "output_type": "peaks",
+          "path": "kidney_DNase_ENCFF050XEY.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF056MTI",
+          "output_type": "peaks",
+          "path": "kidney_DNase_ENCFF056MTI.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF136JFN",
+          "output_type": "peaks",
+          "path": "kidney_DNase_ENCFF136JFN.bed.gz"
+        }
+      ]
+    },
+    "large intestine": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF058ACJ",
+          "output_type": "peaks",
+          "path": "large_intestine_DNase_ENCFF058ACJ.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF196VQQ",
+          "output_type": "peaks",
+          "path": "large_intestine_DNase_ENCFF196VQQ.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF276FKY",
+          "output_type": "peaks",
+          "path": "large_intestine_DNase_ENCFF276FKY.bed.gz"
+        }
+      ]
+    },
+    "left cardiac atrium": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF068ZPM",
+          "output_type": "peaks",
+          "path": "left_cardiac_atrium_DNase_ENCFF068ZPM.bed.gz"
+        }
+      ]
+    },
+    "left forelimb": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF459ENG",
+          "output_type": "peaks",
+          "path": "left_forelimb_DNase_ENCFF459ENG.bed.gz"
+        }
+      ]
+    },
+    "left hindlimb": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF793VFP",
+          "output_type": "peaks",
+          "path": "left_hindlimb_DNase_ENCFF793VFP.bed.gz"
+        }
+      ]
+    },
+    "left kidney": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF311ACF",
+          "output_type": "peaks",
+          "path": "left_kidney_DNase_ENCFF311ACF.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF360YZY",
+          "output_type": "peaks",
+          "path": "left_kidney_DNase_ENCFF360YZY.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF476LDM",
+          "output_type": "peaks",
+          "path": "left_kidney_DNase_ENCFF476LDM.bed.gz"
+        }
+      ]
+    },
+    "left lung": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF059HII",
+          "output_type": "peaks",
+          "path": "left_lung_DNase_ENCFF059HII.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF130KKE",
+          "output_type": "peaks",
+          "path": "left_lung_DNase_ENCFF130KKE.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF185MBE",
+          "output_type": "peaks",
+          "path": "left_lung_DNase_ENCFF185MBE.bed.gz"
+        }
+      ]
+    },
+    "left renal cortex interstitium": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF206SZY",
+          "output_type": "peaks",
+          "path": "left_renal_cortex_interstitium_DNase_ENCFF206SZY.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF307XDO",
+          "output_type": "peaks",
+          "path": "left_renal_cortex_interstitium_DNase_ENCFF307XDO.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF531SWI",
+          "output_type": "peaks",
+          "path": "left_renal_cortex_interstitium_DNase_ENCFF531SWI.bed.gz"
+        }
+      ]
+    },
+    "left renal pelvis": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF132BIV",
+          "output_type": "peaks",
+          "path": "left_renal_pelvis_DNase_ENCFF132BIV.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF276XHO",
+          "output_type": "peaks",
+          "path": "left_renal_pelvis_DNase_ENCFF276XHO.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF352EVQ",
+          "output_type": "peaks",
+          "path": "left_renal_pelvis_DNase_ENCFF352EVQ.bed.gz"
+        }
+      ]
+    },
+    "liver": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF286LYP",
+          "output_type": "peaks",
+          "path": "liver_DNase_ENCFF286LYP.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF547IOY",
+          "output_type": "peaks",
+          "path": "liver_DNase_ENCFF547IOY.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF572VZQ",
+          "output_type": "peaks",
+          "path": "liver_DNase_ENCFF572VZQ.bed.gz"
+        }
+      ]
+    },
+    "lung": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF169QJZ",
+          "output_type": "peaks",
+          "path": "lung_DNase_ENCFF169QJZ.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF230CHA",
+          "output_type": "peaks",
+          "path": "lung_DNase_ENCFF230CHA.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF243LFH",
+          "output_type": "peaks",
+          "path": "lung_DNase_ENCFF243LFH.bed.gz"
+        }
+      ]
+    },
+    "muscle of arm": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF099MBG",
+          "output_type": "peaks",
+          "path": "muscle_of_arm_DNase_ENCFF099MBG.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF172LKJ",
+          "output_type": "peaks",
+          "path": "muscle_of_arm_DNase_ENCFF172LKJ.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF282BQK",
+          "output_type": "peaks",
+          "path": "muscle_of_arm_DNase_ENCFF282BQK.bed.gz"
+        }
+      ]
+    },
+    "muscle of back": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF081UUE",
+          "output_type": "peaks",
+          "path": "muscle_of_back_DNase_ENCFF081UUE.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF171JLD",
+          "output_type": "peaks",
+          "path": "muscle_of_back_DNase_ENCFF171JLD.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF191JLB",
+          "output_type": "peaks",
+          "path": "muscle_of_back_DNase_ENCFF191JLB.bed.gz"
+        }
+      ]
+    },
+    "muscle of leg": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF020LII",
+          "output_type": "peaks",
+          "path": "muscle_of_leg_DNase_ENCFF020LII.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF230WVU",
+          "output_type": "peaks",
+          "path": "muscle_of_leg_DNase_ENCFF230WVU.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF319CPJ",
+          "output_type": "peaks",
+          "path": "muscle_of_leg_DNase_ENCFF319CPJ.bed.gz"
+        }
+      ]
+    },
+    "muscle of trunk": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF448DSH",
+          "output_type": "peaks",
+          "path": "muscle_of_trunk_DNase_ENCFF448DSH.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF562NMD",
+          "output_type": "peaks",
+          "path": "muscle_of_trunk_DNase_ENCFF562NMD.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF836ETB",
+          "output_type": "peaks",
+          "path": "muscle_of_trunk_DNase_ENCFF836ETB.bed.gz"
+        }
+      ]
+    },
+    "natural killer cell": {
+      "classification": "primary cell",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF133YNT",
+          "output_type": "peaks",
+          "path": "natural_killer_cell_DNase_ENCFF133YNT.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF675NXI",
+          "output_type": "peaks",
+          "path": "natural_killer_cell_DNase_ENCFF675NXI.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF840ZTK",
+          "output_type": "peaks",
+          "path": "natural_killer_cell_DNase_ENCFF840ZTK.bed.gz"
+        }
+      ]
+    },
+    "occipital lobe": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF121NZP",
+          "output_type": "peaks",
+          "path": "occipital_lobe_DNase_ENCFF121NZP.bed.gz"
+        }
+      ]
+    },
+    "omental fat pad": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF925YKV",
+          "output_type": "peaks",
+          "path": "omental_fat_pad_DNase_ENCFF925YKV.bed.gz"
+        }
+      ]
+    },
+    "ovary": {
+      "classification": "tissue",
+      "n_rep": 2,
+      "files": [
+        {
+          "file_accession": "ENCFF498QOJ",
+          "output_type": "peaks",
+          "path": "ovary_DNase_ENCFF498QOJ.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF883WWT",
+          "output_type": "peaks",
+          "path": "ovary_DNase_ENCFF883WWT.bed.gz"
+        }
+      ]
+    },
+    "pancreas": {
+      "classification": "tissue",
+      "n_rep": 2,
+      "files": [
+        {
+          "file_accession": "ENCFF735JRV",
+          "output_type": "peaks",
+          "path": "pancreas_DNase_ENCFF735JRV.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF897PRD",
+          "output_type": "peaks",
+          "path": "pancreas_DNase_ENCFF897PRD.bed.gz"
+        }
+      ]
+    },
+    "placenta": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF005DMK",
+          "output_type": "peaks",
+          "path": "placenta_DNase_ENCFF005DMK.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF029JFN",
+          "output_type": "peaks",
+          "path": "placenta_DNase_ENCFF029JFN.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF128BFZ",
+          "output_type": "peaks",
+          "path": "placenta_DNase_ENCFF128BFZ.bed.gz"
+        }
+      ]
+    },
+    "psoas muscle": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF445UFF",
+          "output_type": "peaks",
+          "path": "psoas_muscle_DNase_ENCFF445UFF.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF523BCF",
+          "output_type": "peaks",
+          "path": "psoas_muscle_DNase_ENCFF523BCF.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF654CVF",
+          "output_type": "peaks",
+          "path": "psoas_muscle_DNase_ENCFF654CVF.bed.gz"
+        }
+      ]
+    },
+    "renal cortex interstitium": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF027SVR",
+          "output_type": "peaks",
+          "path": "renal_cortex_interstitium_DNase_ENCFF027SVR.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF051UGM",
+          "output_type": "peaks",
+          "path": "renal_cortex_interstitium_DNase_ENCFF051UGM.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF131FBL",
+          "output_type": "peaks",
+          "path": "renal_cortex_interstitium_DNase_ENCFF131FBL.bed.gz"
+        }
+      ]
+    },
+    "renal pelvis": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF012SAA",
+          "output_type": "peaks",
+          "path": "renal_pelvis_DNase_ENCFF012SAA.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF041XBL",
+          "output_type": "peaks",
+          "path": "renal_pelvis_DNase_ENCFF041XBL.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF293PGI",
+          "output_type": "peaks",
+          "path": "renal_pelvis_DNase_ENCFF293PGI.bed.gz"
+        }
+      ]
+    },
+    "retina": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF009WLN",
+          "output_type": "peaks",
+          "path": "retina_DNase_ENCFF009WLN.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF015ULH",
+          "output_type": "peaks",
+          "path": "retina_DNase_ENCFF015ULH.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF402DMO",
+          "output_type": "peaks",
+          "path": "retina_DNase_ENCFF402DMO.bed.gz"
+        }
+      ]
+    },
+    "right atrium auricular region": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF918YIN",
+          "output_type": "peaks",
+          "path": "right_atrium_auricular_region_DNase_ENCFF918YIN.bed.gz"
+        }
+      ]
+    },
+    "right forelimb": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF463KFI",
+          "output_type": "peaks",
+          "path": "right_forelimb_DNase_ENCFF463KFI.bed.gz"
+        }
+      ]
+    },
+    "right hindlimb": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF369GLM",
+          "output_type": "peaks",
+          "path": "right_hindlimb_DNase_ENCFF369GLM.bed.gz"
+        }
+      ]
+    },
+    "right kidney": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF119HGJ",
+          "output_type": "peaks",
+          "path": "right_kidney_DNase_ENCFF119HGJ.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF186VEE",
+          "output_type": "peaks",
+          "path": "right_kidney_DNase_ENCFF186VEE.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF216UBC",
+          "output_type": "peaks",
+          "path": "right_kidney_DNase_ENCFF216UBC.bed.gz"
+        }
+      ]
+    },
+    "right lung": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF036PGY",
+          "output_type": "peaks",
+          "path": "right_lung_DNase_ENCFF036PGY.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF046QJY",
+          "output_type": "peaks",
+          "path": "right_lung_DNase_ENCFF046QJY.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF104JWY",
+          "output_type": "peaks",
+          "path": "right_lung_DNase_ENCFF104JWY.bed.gz"
+        }
+      ]
+    },
+    "right renal cortex interstitium": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF108GEI",
+          "output_type": "peaks",
+          "path": "right_renal_cortex_interstitium_DNase_ENCFF108GEI.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF251NTZ",
+          "output_type": "peaks",
+          "path": "right_renal_cortex_interstitium_DNase_ENCFF251NTZ.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF585XKV",
+          "output_type": "peaks",
+          "path": "right_renal_cortex_interstitium_DNase_ENCFF585XKV.bed.gz"
+        }
+      ]
+    },
+    "right renal pelvis": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF033GXT",
+          "output_type": "peaks",
+          "path": "right_renal_pelvis_DNase_ENCFF033GXT.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF360OCL",
+          "output_type": "peaks",
+          "path": "right_renal_pelvis_DNase_ENCFF360OCL.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF374BCD",
+          "output_type": "peaks",
+          "path": "right_renal_pelvis_DNase_ENCFF374BCD.bed.gz"
+        }
+      ]
+    },
+    "sigmoid colon": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF006EIZ",
+          "output_type": "peaks",
+          "path": "sigmoid_colon_DNase_ENCFF006EIZ.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF862GVN",
+          "output_type": "peaks",
+          "path": "sigmoid_colon_DNase_ENCFF862GVN.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF882CST",
+          "output_type": "peaks",
+          "path": "sigmoid_colon_DNase_ENCFF882CST.bed.gz"
+        }
+      ]
+    },
+    "skin of body": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF203VLF",
+          "output_type": "peaks",
+          "path": "skin_of_body_DNase_ENCFF203VLF.bed.gz"
+        }
+      ]
+    },
+    "small intestine": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF007XOV",
+          "output_type": "peaks",
+          "path": "small_intestine_DNase_ENCFF007XOV.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF063OCF",
+          "output_type": "peaks",
+          "path": "small_intestine_DNase_ENCFF063OCF.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF321LTV",
+          "output_type": "peaks",
+          "path": "small_intestine_DNase_ENCFF321LTV.bed.gz"
+        }
+      ]
+    },
+    "spinal cord": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF038VGE",
+          "output_type": "peaks",
+          "path": "spinal_cord_DNase_ENCFF038VGE.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF162HDT",
+          "output_type": "peaks",
+          "path": "spinal_cord_DNase_ENCFF162HDT.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF753RBC",
+          "output_type": "peaks",
+          "path": "spinal_cord_DNase_ENCFF753RBC.bed.gz"
+        }
+      ]
+    },
+    "spleen": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF587YNA",
+          "output_type": "peaks",
+          "path": "spleen_DNase_ENCFF587YNA.bed.gz"
+        }
+      ]
+    },
+    "stomach": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF087QAV",
+          "output_type": "peaks",
+          "path": "stomach_DNase_ENCFF087QAV.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF104PLB",
+          "output_type": "peaks",
+          "path": "stomach_DNase_ENCFF104PLB.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF122TCQ",
+          "output_type": "peaks",
+          "path": "stomach_DNase_ENCFF122TCQ.bed.gz"
+        }
+      ]
+    },
+    "testis": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF012QTD",
+          "output_type": "peaks",
+          "path": "testis_DNase_ENCFF012QTD.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF833PXP",
+          "output_type": "peaks",
+          "path": "testis_DNase_ENCFF833PXP.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF843ZSC",
+          "output_type": "peaks",
+          "path": "testis_DNase_ENCFF843ZSC.bed.gz"
+        }
+      ]
+    },
+    "thymus": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF061UBG",
+          "output_type": "peaks",
+          "path": "thymus_DNase_ENCFF061UBG.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF189LKP",
+          "output_type": "peaks",
+          "path": "thymus_DNase_ENCFF189LKP.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF601PAY",
+          "output_type": "peaks",
+          "path": "thymus_DNase_ENCFF601PAY.bed.gz"
+        }
+      ]
+    },
+    "tibial artery": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF378BUF",
+          "output_type": "peaks",
+          "path": "tibial_artery_DNase_ENCFF378BUF.bed.gz"
+        }
+      ]
+    },
+    "tibial nerve": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF424BYY",
+          "output_type": "peaks",
+          "path": "tibial_nerve_DNase_ENCFF424BYY.bed.gz"
+        }
+      ]
+    },
+    "tongue": {
+      "classification": "tissue",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF173CEG",
+          "output_type": "peaks",
+          "path": "tongue_DNase_ENCFF173CEG.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF259KDP",
+          "output_type": "peaks",
+          "path": "tongue_DNase_ENCFF259KDP.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF814UZW",
+          "output_type": "peaks",
+          "path": "tongue_DNase_ENCFF814UZW.bed.gz"
+        }
+      ]
+    },
+    "transverse colon": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF142WAA",
+          "output_type": "peaks",
+          "path": "transverse_colon_DNase_ENCFF142WAA.bed.gz"
+        }
+      ]
+    },
+    "trophoblast cell": {
+      "classification": "in vitro differentiated cells",
+      "n_rep": 3,
+      "files": [
+        {
+          "file_accession": "ENCFF520MND",
+          "output_type": "peaks",
+          "path": "trophoblast_cell_DNase_ENCFF520MND.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF533MFM",
+          "output_type": "peaks",
+          "path": "trophoblast_cell_DNase_ENCFF533MFM.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF855CMV",
+          "output_type": "peaks",
+          "path": "trophoblast_cell_DNase_ENCFF855CMV.bed.gz"
+        }
+      ]
+    },
+    "upper lobe of left lung": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF271JAF",
+          "output_type": "peaks",
+          "path": "upper_lobe_of_left_lung_DNase_ENCFF271JAF.bed.gz"
+        }
+      ]
+    },
+    "urinary bladder": {
+      "classification": "tissue",
+      "n_rep": 1,
+      "files": [
+        {
+          "file_accession": "ENCFF391VLP",
+          "output_type": "peaks",
+          "path": "urinary_bladder_DNase_ENCFF391VLP.bed.gz"
+        }
+      ]
+    },
+    "vagina": {
+      "classification": "tissue",
+      "n_rep": 2,
+      "files": [
+        {
+          "file_accession": "ENCFF538ASZ",
+          "output_type": "peaks",
+          "path": "vagina_DNase_ENCFF538ASZ.bed.gz"
+        },
+        {
+          "file_accession": "ENCFF600WRF",
+          "output_type": "peaks",
+          "path": "vagina_DNase_ENCFF600WRF.bed.gz"
+        }
+      ]
+    }
+  },
+  "n_tissues_encode": 72
+}

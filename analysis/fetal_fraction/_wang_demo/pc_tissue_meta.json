@@ -1,0 +1,9 @@
+{
+  "n_pcs": 100,
+  "n_tissues": 33,
+  "n_shared_bins": 57633,
+  "topn": 2000,
+  "n_pos": 2000,
+  "n_neg": 2000,
+  "tissues": ["B", "CD14_M", "CD16_M", "GC", "DSC_A", "DSC_B", "EVT", "proEVT", "fEC", "LEC", "Epi", "Ery", "FB", "vEC", "pvSMC", "SCT", "SCT_A", "SCT_B", "proSCT", "T", "VCT", "cycling_VCT", "aEC", "avVCT", "cDC", "cilated", "dNK", "eS", "eEVT", "iEVT", "uDSC", "pEVT", "HB"]
+}

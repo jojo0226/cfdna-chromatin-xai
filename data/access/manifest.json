@@ -1,0 +1,76 @@
+[
+  {
+    "tissue": "placenta",
+    "assay": "DNase-seq",
+    "file_acc": "ENCFF316XWU",
+    "exp": "ENCSR035QHH",
+    "output_type": "peaks",
+    "biosample_term": "placenta",
+    "proxy_for": null,
+    "peaks_chr19_22": 32136,
+    "file": "placenta_DNase_ENCFF316XWU.bed.gz",
+    "size": 290899
+  },
+  {
+    "tissue": "neutrophil",
+    "assay": "DNase-seq",
+    "file_acc": "ENCFF136KXE",
+    "exp": "ENCSR000ELE",
+    "output_type": "peaks",
+    "biosample_term": "CD14-positive monocyte",
+    "proxy_for": "neutrophil",
+    "peaks_chr19_22": 21885,
+    "file": "neutrophil_DNase_ENCFF136KXE.bed.gz",
+    "size": 209747
+  },
+  {
+    "tissue": "Bcell",
+    "assay": "DNase-seq",
+    "file_acc": "ENCFF251ZFA",
+    "exp": "ENCSR000EII",
+    "output_type": "peaks",
+    "biosample_term": "B cell",
+    "proxy_for": null,
+    "peaks_chr19_22": 21065,
+    "file": "Bcell_DNase_ENCFF251ZFA.bed.gz",
+    "size": 205332
+  },
+  {
+    "tissue": "K562",
+    "assay": "DNase-seq",
+    "file_acc": "ENCFF218UJY",
+    "exp": "ENCSR000EKN",
+    "output_type": "peaks",
+    "biosample_term": "K562",
+    "proxy_for": null,
+    "peaks_chr19_22": 67991,
+    "file": "K562_DNase_ENCFF218UJY.bed.gz",
+    "size": 572328
+  },
+  {
+    "tissue": "keratinocyte",
+    "assay": "DNase-seq",
+    "file_acc": "ENCFF584NKA",
+    "exp": "ENCSR000ELH",
+    "output_type": "peaks",
+    "biosample_term": "keratinocyte",
+    "proxy_for": null,
+    "peaks_chr19_22": 7982,
+    "file": "keratinocyte_DNase_ENCFF584NKA.bed.gz",
+    "size": 75075
+  },
+  {
+    "tissue": "monocyte",
+    "assay": "DNase-seq",
+    "file_acc": "ENCFF203EKC",
+    "exp": "ENCSR000ELE",
+    "output_type": "peaks",
+    "biosample_term": "CD14-positive monocyte",
+    "proxy_for": null,
+    "role": "inflammation",
+    "peaks_chr19_22": 28392,
+    "file": "monocyte_DNase_ENCFF203EKC.bed.gz",
+    "size": 243965,
+    "note": "DNase from ENCSR000ELE \u2014 same experiment as neutrophil-slot DNase proxy; inflammation contrast on DNase layer is therefore correlated with background, read inflammation axis primarily from histone marks"
+  }
+]

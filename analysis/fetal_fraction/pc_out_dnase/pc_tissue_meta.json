@@ -1,0 +1,9 @@
+{
+  "n_pcs": 100,
+  "n_tissues": 73,
+  "n_shared_bins": 57633,
+  "topn": 2000,
+  "n_pos": 2000,
+  "n_neg": 2000,
+  "tissues": ["Peyer's patch", "adrenal gland", "brain", "cerebellum", "chorion", "coronary artery", "esophagus muscularis mucosa", "esophagus squamous epithelium", "eye", "femur", "forelimb muscle", "frontal cortex", "germinal center", "heart", "heart left ventricle", "heart right ventricle", "hindlimb muscle", "kidney", "large intestine", "left cardiac atrium", "left forelimb", "left hindlimb", "left kidney", "left lung", "left renal cortex interstitium", "left renal pelvis", "liver", "lung", "muscle of arm", "muscle of back", "muscle of leg", "muscle of trunk", "occipital lobe", "omental fat pad", "ovary", "pancreas", "placenta", "psoas muscle", "renal cortex interstitium", "renal pelvis", "retina", "right atrium auricular region", "right forelimb", "right hindlimb", "right kidney", "right lung", "right renal cortex interstitium", "right renal pelvis", "sigmoid colon", "skin of body", "small intestine", "spinal cord", "spleen", "stomach", "testis", "thymus", "tibial artery", "tibial nerve", "tongue", "transverse colon", "upper lobe of left lung", "urinary bladder", "vagina", "CD14-positive monocyte", "B cell", "CD4-positive, alpha-beta T cell", "CD8-positive, alpha-beta T cell", "natural killer cell", "common myeloid progenitor, CD34-positive", "trophoblast cell", "endothelial cell of umbilical vein", "dermis blood vessel endothelial cell", "neutrophil"]
+}

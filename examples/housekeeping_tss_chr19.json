@@ -1,0 +1,134 @@
+[
+ {
+  "gene": "RPL13A",
+  "chrom": "chr19",
+  "tss": 49487510,
+  "strand": 1
+ },
+ {
+  "gene": "GPI",
+  "chrom": "chr19",
+  "tss": 34359480,
+  "strand": 1
+ },
+ {
+  "gene": "RPS9",
+  "chrom": "chr19",
+  "tss": 54200466,
+  "strand": 1
+ },
+ {
+  "gene": "SNRPD2",
+  "chrom": "chr19",
+  "tss": 45692569,
+  "strand": -1
+ },
+ {
+  "gene": "PRMT1",
+  "chrom": "chr19",
+  "tss": 49675786,
+  "strand": 1
+ },
+ {
+  "gene": "NDUFA7",
+  "chrom": "chr19",
+  "tss": 8321400,
+  "strand": -1
+ },
+ {
+  "gene": "U2AF2",
+  "chrom": "chr19",
+  "tss": 55654115,
+  "strand": 1
+ },
+ {
+  "gene": "GYS1",
+  "chrom": "chr19",
+  "tss": 48993349,
+  "strand": -1
+ },
+ {
+  "gene": "RPL18",
+  "chrom": "chr19",
+  "tss": 48619213,
+  "strand": -1
+ },
+ {
+  "gene": "EIF3K",
+  "chrom": "chr19",
+  "tss": 38619055,
+  "strand": 1
+ },
+ {
+  "gene": "RPS19",
+  "chrom": "chr19",
+  "tss": 41859848,
+  "strand": 1
+ },
+ {
+  "gene": "SNRPA",
+  "chrom": "chr19",
+  "tss": 40750585,
+  "strand": 1
+ },
+ {
+  "gene": "TOMM40",
+  "chrom": "chr19",
+  "tss": 44890569,
+  "strand": 1
+ },
+ {
+  "gene": "GPX4",
+  "chrom": "chr19",
+  "tss": 1103982,
+  "strand": 1
+ },
+ {
+  "gene": "JUND",
+  "chrom": "chr19",
+  "tss": 18281622,
+  "strand": -1
+ },
+ {
+  "gene": "FTL",
+  "chrom": "chr19",
+  "tss": 48965275,
+  "strand": 1
+ },
+ {
+  "gene": "BAX",
+  "chrom": "chr19",
+  "tss": 48954815,
+  "strand": 1
+ },
+ {
+  "gene": "CIRBP",
+  "chrom": "chr19",
+  "tss": 1259384,
+  "strand": 1
+ },
+ {
+  "gene": "RPS15",
+  "chrom": "chr19",
+  "tss": 1438149,
+  "strand": 1
+ },
+ {
+  "gene": "RPS28",
+  "chrom": "chr19",
+  "tss": 8307760,
+  "strand": 1
+ },
+ {
+  "gene": "OAZ1",
+  "chrom": "chr19",
+  "tss": 2269509,
+  "strand": 1
+ },
+ {
+  "gene": "KLF1",
+  "chrom": "chr19",
+  "tss": 12887201,
+  "strand": -1
+ }
+]

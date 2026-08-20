@@ -1,0 +1,165 @@
+biosample,classification,output_type,file_accession
+B cell,primary cell,peaks,ENCFF159HJV
+B cell,primary cell,peaks,ENCFF263YRO
+B cell,primary cell,peaks,ENCFF403PJS
+CD14-positive monocyte,primary cell,peaks,ENCFF063IUG
+CD14-positive monocyte,primary cell,peaks,ENCFF289XSM
+CD14-positive monocyte,primary cell,peaks,ENCFF363XGK
+"CD4-positive, alpha-beta T cell",primary cell,peaks,ENCFF023ZMS
+"CD4-positive, alpha-beta T cell",primary cell,peaks,ENCFF109RSW
+"CD4-positive, alpha-beta T cell",primary cell,peaks,ENCFF191WFG
+"CD8-positive, alpha-beta T cell",primary cell,peaks,ENCFF109VIJ
+"CD8-positive, alpha-beta T cell",primary cell,peaks,ENCFF512IML
+"CD8-positive, alpha-beta T cell",primary cell,peaks,ENCFF566SXQ
+Peyer's patch,tissue,peaks,ENCFF055ZSF
+adrenal gland,tissue,peaks,ENCFF094AUJ
+adrenal gland,tissue,peaks,ENCFF179WUI
+adrenal gland,tissue,peaks,ENCFF215UXZ
+brain,tissue,peaks,ENCFF103UPI
+brain,tissue,peaks,ENCFF205KSG
+brain,tissue,peaks,ENCFF207IYJ
+cerebellum,tissue,peaks,ENCFF455ZGC
+cerebellum,tissue,peaks,ENCFF952ETG
+chorion,tissue,peaks,ENCFF772FRH
+"common myeloid progenitor, CD34-positive",primary cell,peaks,ENCFF024DAR
+"common myeloid progenitor, CD34-positive",primary cell,peaks,ENCFF059VUS
+"common myeloid progenitor, CD34-positive",primary cell,peaks,ENCFF110CYC
+coronary artery,tissue,peaks,ENCFF021ZDC
+coronary artery,tissue,peaks,ENCFF739ASH
+dermis blood vessel endothelial cell,primary cell,peaks,ENCFF045UNP
+dermis blood vessel endothelial cell,primary cell,peaks,ENCFF084LGH
+dermis blood vessel endothelial cell,primary cell,peaks,ENCFF419NYS
+endothelial cell of umbilical vein,primary cell,peaks,ENCFF097KBE
+endothelial cell of umbilical vein,primary cell,peaks,ENCFF330HEK
+endothelial cell of umbilical vein,primary cell,peaks,ENCFF382IRS
+esophagus muscularis mucosa,tissue,peaks,ENCFF747AGO
+esophagus squamous epithelium,tissue,peaks,ENCFF197ZNE
+eye,tissue,peaks,ENCFF600YFF
+eye,tissue,peaks,ENCFF720MLF
+eye,tissue,peaks,ENCFF984RUT
+femur,tissue,peaks,ENCFF760NDX
+forelimb muscle,tissue,peaks,ENCFF850STV
+frontal cortex,tissue,peaks,ENCFF101NVD
+frontal cortex,tissue,peaks,ENCFF144EGT
+frontal cortex,tissue,peaks,ENCFF281ASO
+germinal center,tissue,peaks,ENCFF025VVW
+heart,tissue,peaks,ENCFF007RSQ
+heart,tissue,peaks,ENCFF053SED
+heart,tissue,peaks,ENCFF086KUU
+heart left ventricle,tissue,peaks,ENCFF224GQJ
+heart left ventricle,tissue,peaks,ENCFF409QXF
+heart left ventricle,tissue,peaks,ENCFF520HKD
+heart right ventricle,tissue,peaks,ENCFF250FRA
+heart right ventricle,tissue,peaks,ENCFF687FIQ
+hindlimb muscle,tissue,peaks,ENCFF903ULR
+kidney,tissue,peaks,ENCFF050XEY
+kidney,tissue,peaks,ENCFF056MTI
+kidney,tissue,peaks,ENCFF136JFN
+large intestine,tissue,peaks,ENCFF058ACJ
+large intestine,tissue,peaks,ENCFF196VQQ
+large intestine,tissue,peaks,ENCFF276FKY
+left cardiac atrium,tissue,peaks,ENCFF068ZPM
+left forelimb,tissue,peaks,ENCFF459ENG
+left hindlimb,tissue,peaks,ENCFF793VFP
+left kidney,tissue,peaks,ENCFF311ACF
+left kidney,tissue,peaks,ENCFF360YZY
+left kidney,tissue,peaks,ENCFF476LDM
+left lung,tissue,peaks,ENCFF059HII
+left lung,tissue,peaks,ENCFF130KKE
+left lung,tissue,peaks,ENCFF185MBE
+left renal cortex interstitium,tissue,peaks,ENCFF206SZY
+left renal cortex interstitium,tissue,peaks,ENCFF307XDO
+left renal cortex interstitium,tissue,peaks,ENCFF531SWI
+left renal pelvis,tissue,peaks,ENCFF132BIV
+left renal pelvis,tissue,peaks,ENCFF276XHO
+left renal pelvis,tissue,peaks,ENCFF352EVQ
+liver,tissue,peaks,ENCFF286LYP
+liver,tissue,peaks,ENCFF547IOY
+liver,tissue,peaks,ENCFF572VZQ
+lung,tissue,peaks,ENCFF169QJZ
+lung,tissue,peaks,ENCFF230CHA
+lung,tissue,peaks,ENCFF243LFH
+muscle of arm,tissue,peaks,ENCFF099MBG
+muscle of arm,tissue,peaks,ENCFF172LKJ
+muscle of arm,tissue,peaks,ENCFF282BQK
+muscle of back,tissue,peaks,ENCFF081UUE
+muscle of back,tissue,peaks,ENCFF171JLD
+muscle of back,tissue,peaks,ENCFF191JLB
+muscle of leg,tissue,peaks,ENCFF020LII
+muscle of leg,tissue,peaks,ENCFF230WVU
+muscle of leg,tissue,peaks,ENCFF319CPJ
+muscle of trunk,tissue,peaks,ENCFF448DSH
+muscle of trunk,tissue,peaks,ENCFF562NMD
+muscle of trunk,tissue,peaks,ENCFF836ETB
+natural killer cell,primary cell,peaks,ENCFF133YNT
+natural killer cell,primary cell,peaks,ENCFF675NXI
+natural killer cell,primary cell,peaks,ENCFF840ZTK
+occipital lobe,tissue,peaks,ENCFF121NZP
+omental fat pad,tissue,peaks,ENCFF925YKV
+ovary,tissue,peaks,ENCFF498QOJ
+ovary,tissue,peaks,ENCFF883WWT
+pancreas,tissue,peaks,ENCFF735JRV
+pancreas,tissue,peaks,ENCFF897PRD
+placenta,tissue,peaks,ENCFF005DMK
+placenta,tissue,peaks,ENCFF029JFN
+placenta,tissue,peaks,ENCFF128BFZ
+psoas muscle,tissue,peaks,ENCFF445UFF
+psoas muscle,tissue,peaks,ENCFF523BCF
+psoas muscle,tissue,peaks,ENCFF654CVF
+renal cortex interstitium,tissue,peaks,ENCFF027SVR
+renal cortex interstitium,tissue,peaks,ENCFF051UGM
+renal cortex interstitium,tissue,peaks,ENCFF131FBL
+renal pelvis,tissue,peaks,ENCFF012SAA
+renal pelvis,tissue,peaks,ENCFF041XBL
+renal pelvis,tissue,peaks,ENCFF293PGI
+retina,tissue,peaks,ENCFF009WLN
+retina,tissue,peaks,ENCFF015ULH
+retina,tissue,peaks,ENCFF402DMO
+right atrium auricular region,tissue,peaks,ENCFF918YIN
+right forelimb,tissue,peaks,ENCFF463KFI
+right hindlimb,tissue,peaks,ENCFF369GLM
+right kidney,tissue,peaks,ENCFF119HGJ
+right kidney,tissue,peaks,ENCFF186VEE
+right kidney,tissue,peaks,ENCFF216UBC
+right lung,tissue,peaks,ENCFF036PGY
+right lung,tissue,peaks,ENCFF046QJY
+right lung,tissue,peaks,ENCFF104JWY
+right renal cortex interstitium,tissue,peaks,ENCFF108GEI
+right renal cortex interstitium,tissue,peaks,ENCFF251NTZ
+right renal cortex interstitium,tissue,peaks,ENCFF585XKV
+right renal pelvis,tissue,peaks,ENCFF033GXT
+right renal pelvis,tissue,peaks,ENCFF360OCL
+right renal pelvis,tissue,peaks,ENCFF374BCD
+sigmoid colon,tissue,peaks,ENCFF006EIZ
+sigmoid colon,tissue,peaks,ENCFF862GVN
+sigmoid colon,tissue,peaks,ENCFF882CST
+skin of body,tissue,peaks,ENCFF203VLF
+small intestine,tissue,peaks,ENCFF007XOV
+small intestine,tissue,peaks,ENCFF063OCF
+small intestine,tissue,peaks,ENCFF321LTV
+spinal cord,tissue,peaks,ENCFF038VGE
+spinal cord,tissue,peaks,ENCFF162HDT
+spinal cord,tissue,peaks,ENCFF753RBC
+spleen,tissue,peaks,ENCFF587YNA
+stomach,tissue,peaks,ENCFF087QAV
+stomach,tissue,peaks,ENCFF104PLB
+stomach,tissue,peaks,ENCFF122TCQ
+testis,tissue,peaks,ENCFF012QTD
+testis,tissue,peaks,ENCFF833PXP
+testis,tissue,peaks,ENCFF843ZSC
+thymus,tissue,peaks,ENCFF061UBG
+thymus,tissue,peaks,ENCFF189LKP
+thymus,tissue,peaks,ENCFF601PAY
+tibial artery,tissue,peaks,ENCFF378BUF
+tibial nerve,tissue,peaks,ENCFF424BYY
+tongue,tissue,peaks,ENCFF173CEG
+tongue,tissue,peaks,ENCFF259KDP
+tongue,tissue,peaks,ENCFF814UZW
+transverse colon,tissue,peaks,ENCFF142WAA
+trophoblast cell,in vitro differentiated cells,peaks,ENCFF520MND
+trophoblast cell,in vitro differentiated cells,peaks,ENCFF533MFM
+trophoblast cell,in vitro differentiated cells,peaks,ENCFF855CMV
+upper lobe of left lung,tissue,peaks,ENCFF271JAF
+urinary bladder,tissue,peaks,ENCFF391VLP
+vagina,tissue,peaks,ENCFF538ASZ
+vagina,tissue,peaks,ENCFF600WRF

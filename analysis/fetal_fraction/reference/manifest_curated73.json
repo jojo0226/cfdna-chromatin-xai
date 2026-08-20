@@ -1,0 +1,344 @@
+{
+  "assembly": "hg19",
+  "bin_size": 50000,
+  "n_bins": 57633,
+  "n_tissues": 73,
+  "assay": "DNase-seq",
+  "weight": "signalValue",
+  "aggregation": "zmean over replicates",
+  "source": "ENCODE hg19 DNase narrowPeak, <=3 reps/biosample",
+  "panel_definition": "63 ENCODE 'tissue' biosamples + curated cfDNA-relevant primary cells (5 immune + CMP myeloid proxy + trophoblast + 2 endothelial)",
+  "curated_additions": {
+    "immune": [
+      "CD14-positive monocyte",
+      "B cell",
+      "CD4-positive, alpha-beta T cell",
+      "CD8-positive, alpha-beta T cell",
+      "natural killer cell"
+    ],
+    "myeloid_proxy_for_absent_neutrophil": [
+      "common myeloid progenitor, CD34-positive"
+    ],
+    "cfdna_relevant": [
+      "trophoblast cell",
+      "endothelial cell of umbilical vein",
+      "dermis blood vessel endothelial cell"
+    ],
+    "real_neutrophil_accessibility": [
+      "Neutrophil_fetalung",
+      "GMPNeutrophil_CD34_bonemarrowPBMC",
+      "GMPNeutrophil_bonemarrowPBMC"
+    ]
+  },
+  "neutrophil_note": "RESOLVED: real hg19 neutrophil accessibility added as C_neutrophil (3 user-supplied peak sets: fetal-lung neutrophil + two GMP/bone-marrow neutrophil, signalValue-weighted zmean). The CD34+ CMP proxy remains in the panel as the myeloid-progenitor axis; neutrophil is now a distinct mature-granulocyte column.",
+  "tissues": {
+    "Peyer's patch": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "adrenal gland": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "brain": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "cerebellum": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "chorion": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "coronary artery": {
+      "n_rep": 2,
+      "class": "tissue"
+    },
+    "esophagus muscularis mucosa": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "esophagus squamous epithelium": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "eye": {
+      "n_rep": 2,
+      "class": "tissue"
+    },
+    "femur": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "forelimb muscle": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "frontal cortex": {
+      "n_rep": 2,
+      "class": "tissue"
+    },
+    "germinal center": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "heart": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "heart left ventricle": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "heart right ventricle": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "hindlimb muscle": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "kidney": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "large intestine": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "left cardiac atrium": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "left forelimb": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "left hindlimb": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "left kidney": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "left lung": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "left renal cortex interstitium": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "left renal pelvis": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "liver": {
+      "n_rep": 2,
+      "class": "tissue"
+    },
+    "lung": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "muscle of arm": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "muscle of back": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "muscle of leg": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "muscle of trunk": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "occipital lobe": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "omental fat pad": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "ovary": {
+      "n_rep": 2,
+      "class": "tissue"
+    },
+    "pancreas": {
+      "n_rep": 2,
+      "class": "tissue"
+    },
+    "placenta": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "psoas muscle": {
+      "n_rep": 2,
+      "class": "tissue"
+    },
+    "renal cortex interstitium": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "renal pelvis": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "retina": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "right atrium auricular region": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "right forelimb": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "right hindlimb": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "right kidney": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "right lung": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "right renal cortex interstitium": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "right renal pelvis": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "sigmoid colon": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "skin of body": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "small intestine": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "spinal cord": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "spleen": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "stomach": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "testis": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "thymus": {
+      "n_rep": 3,
+      "class": "tissue"
+    },
+    "tibial artery": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "tibial nerve": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "tongue": {
+      "n_rep": 2,
+      "class": "tissue"
+    },
+    "transverse colon": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "upper lobe of left lung": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "urinary bladder": {
+      "n_rep": 1,
+      "class": "tissue"
+    },
+    "vagina": {
+      "n_rep": 2,
+      "class": "tissue"
+    },
+    "CD14-positive monocyte": {
+      "n_rep": 3,
+      "class": "primary cell"
+    },
+    "B cell": {
+      "n_rep": 3,
+      "class": "primary cell"
+    },
+    "CD4-positive, alpha-beta T cell": {
+      "n_rep": 3,
+      "class": "primary cell"
+    },
+    "CD8-positive, alpha-beta T cell": {
+      "n_rep": 3,
+      "class": "primary cell"
+    },
+    "natural killer cell": {
+      "n_rep": 3,
+      "class": "primary cell"
+    },
+    "common myeloid progenitor, CD34-positive": {
+      "n_rep": 3,
+      "class": "primary cell"
+    },
+    "trophoblast cell": {
+      "n_rep": 3,
+      "class": "primary cell"
+    },
+    "endothelial cell of umbilical vein": {
+      "n_rep": 2,
+      "class": "primary cell"
+    },
+    "dermis blood vessel endothelial cell": {
+      "n_rep": 3,
+      "class": "primary cell"
+    },
+    "neutrophil": {
+      "n_rep": 3,
+      "class": "primary cell"
+    }
+  },
+  "positive_control": {
+    "placenta": {
+      "median_rank": 1,
+      "argmax_frac": 0.64
+    },
+    "trophoblast cell": {
+      "median_rank": 2,
+      "argmax_frac": 0.5
+    },
+    "CD14-positive monocyte": {
+      "median_rank": 1,
+      "argmax_frac": 0.71
+    },
+    "panel_size": 72
+  },
+  "excluded": "Cancer cell lines, in-vitro-differentiated cells, and non-cfDNA-relevant primaries (fibroblast subtypes, astrocyte variants, assorted epithelia) were left out to avoid collinear noise. The full 235-column atlas remains available if a wider null is wanted."
+}

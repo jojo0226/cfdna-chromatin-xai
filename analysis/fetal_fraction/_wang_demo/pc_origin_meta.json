@@ -1,0 +1,24 @@
+{
+  "model": "synth_pca_model.rds",
+  "atlas": "reference/wang_mfi_openness_hg19_50kb.csv.gz",
+  "n_shared_bins": 57633,
+  "topn": 2000,
+  "n_perm": 2000,
+  "seed": 0,
+  "n_pc_fetal": 56,
+  "n_pc_maternal": 44,
+  "fisher_p": 0,
+  "odds_ratio": 17.4588,
+  "contingency": [
+    {
+      "Fetal": 1727,
+      "Maternal": 272,
+      "_row": "up"
+    },
+    {
+      "Fetal": 521,
+      "Maternal": 1434,
+      "_row": "down"
+    }
+  ]
+}

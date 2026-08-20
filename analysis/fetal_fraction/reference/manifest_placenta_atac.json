@@ -1,0 +1,32 @@
+{
+  "atlas": "placental snATAC openness (Wang et al. 2024)",
+  "genome": "hg19 (lifted from hg38; UCSC hg38ToHg19)",
+  "bin_size": 50000,
+  "n_bins": 57633,
+  "cell_types": [
+    "EVT",
+    "Endothelial",
+    "Erythroid",
+    "Fibroblast",
+    "STB",
+    "vCTB"
+  ],
+  "columns": [
+    "chrom",
+    "start",
+    "end",
+    "key",
+    "A_EVT",
+    "A_Endothelial",
+    "A_Erythroid",
+    "A_Fibroblast",
+    "A_STB",
+    "A_vCTB",
+    "placenta_atac_spec"
+  ],
+  "value": "per-cell-type CPM summed per 50kb bin (stages pooled by n_cells), z-scored across bins",
+  "source_h5": "Wang2024_pregnancy_snATAC_atlas_hg19.h5",
+  "study": "Wang M et al., Nat Genet 56:294-305 (2024), DOI 10.1038/s41588-023-01647-w, GSE247036",
+  "n_peaks_source": 283406,
+  "note": "SEPARATE layer -- do NOT merge into C_ DNase columns; use for cross-modal validation and PC alignment (pc_tissue_map.R --prefix A_)."
+}
