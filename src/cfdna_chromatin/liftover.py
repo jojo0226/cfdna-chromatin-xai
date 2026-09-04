@@ -51,7 +51,8 @@ def _lift_point(lifter, chrom, pos):
 
 
 def lift_regions(regions, from_build="hg19", to_build="hg38",
-                 chain_path=None, lifter=None, round_trip=True, rt_tol=2):
+                 chain_path=None, back_chain_path=None, lifter=None,
+                 round_trip=True, rt_tol=2):
     """Lift a list/frame of regions between builds with QC.
 
     regions : list of (chrom,start,end) OR a DataFrame with chrom/start/end
@@ -66,7 +67,7 @@ def lift_regions(regions, from_build="hg19", to_build="hg38",
         lifter = get_lifter(from_build, to_build, chain_path)
     back = None
     if round_trip:
-        back = get_lifter(to_build, from_build, None if chain_path else None)
+        back = get_lifter(to_build, from_build, back_chain_path)
 
     if isinstance(regions, pd.DataFrame):
         df = regions.copy()

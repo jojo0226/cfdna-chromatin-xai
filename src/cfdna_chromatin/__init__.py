@@ -4,6 +4,8 @@ Public API:
     references : ChromHMM 18-state vocabulary, groups, reference loading
     genome     : GC / mappability bookkeeping for matched-null sampling
     engine     : annotation + matched-null enrichment test
+    chromhmm   : user-facing ChromHMM state-annotation façade (build-aware:
+                 hg38 reference, auto-lift for hg19 query bins)
     histone    : histone-mark fingerprint layer (orthogonal cross-check)
     accessibility : open-chromatin (DNase-seq) layer (orthogonal cross-check)
     benchmark  : B1 statistical-calibration harness
@@ -13,7 +15,7 @@ Public API:
 """
 from . import (  # noqa: F401
     references, genome, engine, histone, accessibility, benchmark, attribute, selection,
-    liftover,
+    liftover, chromhmm,
 )
 
-__version__ = "0.6.3"
+__version__ = "0.7.0"

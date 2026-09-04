@@ -3,6 +3,34 @@
 All notable changes to **cfdna-chromatin-xai** are documented here.
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.7.0] - 2026-09-04
+### Added
+- **New packaged `cfdna_chromatin.chromhmm` module** — a build-aware, user-facing
+  façade over the internal `references`/`engine`/`liftover` layers that annotates a
+  region's importance table (SHAP or differential) against the bundled ChromHMM
+  18-state reference epigenomes and reports the state/group composition of the
+  top-|importance| bins. Handles hg19 inputs three ways: (1) per-analysis auto-lift
+  hg19→hg38, (2) pre-lift the references hg38→hg19 for a whole cohort
+  (`scripts/prelift_chromhmm_hg19.py`), or (3) drop in native Roadmap/full-stack
+  hg19 tracks. Key functions: `annotate_importance_bins()` (one-call driver),
+  `state_composition()`, `composition_matrix()`, `multi_cutoff_composition()`,
+  `plot_composition_heatmaps()`.
+- **New `scripts/run_chromhmm.py`** — CLI over the module. Auto-detects key/importance/
+  direction columns, ranks by |importance|, and writes per-tissue composition CSVs +
+  annotated bins + `chromhmm_meta.json`. Flags: `--from-build {hg38,hg19}`, `--chain`
+  (forward UCSC chain), `--back-chain` (reverse chain — enables offline round-trip QC),
+  `--top-ns 1000,2000,5000` + `--plot` for a multi-cutoff composition heatmap, and
+  `--fasta-dir` for matched-null state enrichment.
+- **New `scripts/run_fullstack_chromhmm.py`** — cell-type-agnostic alternative that
+  annotates against the Ernst-lab **universal (full-stack) 100-state** ChromHMM model
+  (native hg19 and hg38, no per-cell-type choice), collapsing the 100 states into ~16
+  functional groups. Answers "what functional chromatin are the top regions in?"
+  without committing to any single reference epigenome.
+- **Liftover round-trip fix** — `liftover.lift_regions()` gains a `back_chain_path`
+  parameter so reverse-direction round-trip QC uses a local chain instead of forcing a
+  network auto-download (which fails offline). Threaded through `prepare_query()` /
+  `annotate_importance_bins()` and the `--back-chain` CLI flag.
+
 ## [0.6.2] - 2026-08-18
 ### Added
 - **New `run_ff_tissue_track.py` lollipop layout** (`--style lollipop`,

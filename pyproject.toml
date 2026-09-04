@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cfdna-chromatin-xai"
-version = "0.6.3"
+version = "0.7.0"
 description = "Explainable chromatin-state annotation and matched-null enrichment for cfDNA genomic regions (hg38)"
 readme = "README.md"
 requires-python = ">=3.10"
